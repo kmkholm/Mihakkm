@@ -25,10 +25,10 @@ public final class Repo {
         ContentValues v = new ContentValues();
         v.put("journal_id", r.journalId);
         v.put("journal_name", r.journalName);
-        v.put("manuscript_id", r.manuscriptId);
-        v.put("title", r.title);
-        v.put("authors", r.authors);
-        v.put("editor", r.editor);
+        v.put("manuscript_id", Crypto.encrypt(r.manuscriptId));
+        v.put("title", Crypto.encrypt(r.title));
+        v.put("authors", Crypto.encrypt(r.authors));
+        v.put("editor", Crypto.encrypt(r.editor));
         v.put("round", r.round);
         v.put("parent_id", r.parentId);
         v.put("study_type", r.studyType);
@@ -40,11 +40,11 @@ public final class Repo {
         v.put("submitted_on", r.submittedOn);
         v.put("hours", r.hours);
         v.put("checklist_key", r.checklistKey);
-        v.put("checklist_state", r.checklistState);
-        v.put("report_text", r.reportText);
-        v.put("editor_notes", r.editorNotes);
-        v.put("notes", r.notes);
-        v.put("tags", r.tags);
+        v.put("checklist_state", Crypto.encrypt(r.checklistState));
+        v.put("report_text", Crypto.encrypt(r.reportText));
+        v.put("editor_notes", Crypto.encrypt(r.editorNotes));
+        v.put("notes", Crypto.encrypt(r.notes));
+        v.put("tags", Crypto.encrypt(r.tags));
         v.put("orcid_put_code", TextUtils.isEmpty(r.orcidPutCode) ? null : r.orcidPutCode);
         v.put("verified", r.verified ? 1 : 0);
         v.put("source", r.source);
@@ -93,19 +93,36 @@ public final class Repo {
                 args.add(statusFilter);
             }
         }
-        if (!TextUtils.isEmpty(text)) {
-            w.append(" AND (title LIKE ? OR journal_name LIKE ? OR manuscript_id LIKE ?"
-                    + " OR authors LIKE ? OR editor LIKE ? OR tags LIKE ?)");
-            String like = "%" + text + "%";
-            for (int i = 0; i < 6; i++) args.add(like);
-        }
         if (!TextUtils.isEmpty(year)) {
             w.append(" AND (substr(COALESCE(NULLIF(submitted_on,''),invited_on),1,4)=?)");
             args.add(year);
         }
-        return raw("SELECT * FROM " + Db.T_REVIEWS + " WHERE " + w
+        List<Review> rows = raw("SELECT * FROM " + Db.T_REVIEWS + " WHERE " + w
                         + " ORDER BY COALESCE(NULLIF(submitted_on,''), NULLIF(due_on,''), invited_on) DESC, _id DESC",
                 args.toArray(new String[0]));
+
+        // Titles, IDs, authors and tags are encrypted at rest, so a SQL LIKE would
+        // match ciphertext. Status and year still narrow the set in SQL; the text
+        // match runs over the decrypted rows.
+        return TextUtils.isEmpty(text) ? rows : matching(rows, text);
+    }
+
+    private static List<Review> matching(List<Review> rows, String text) {
+        String needle = text.toLowerCase(java.util.Locale.getDefault());
+        List<Review> out = new ArrayList<>();
+        for (Review r : rows) {
+            if (contains(r.title, needle) || contains(r.journalName, needle)
+                    || contains(r.manuscriptId, needle) || contains(r.authors, needle)
+                    || contains(r.editor, needle) || contains(r.tags, needle)) {
+                out.add(r);
+            }
+        }
+        return out;
+    }
+
+    private static boolean contains(String haystack, String lowerNeedle) {
+        return haystack != null
+                && haystack.toLowerCase(java.util.Locale.getDefault()).contains(lowerNeedle);
     }
 
     /** Every open review with a deadline, for the reminder scheduler. */

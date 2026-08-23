@@ -2,6 +2,7 @@ package com.drtawfik.mihakk.ui;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
@@ -11,7 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.NumberPicker;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -53,6 +56,7 @@ public class SettingsFragment extends Fragment {
         bindText(v.findViewById(R.id.orcid), Prefs.ORCID_ID);
 
         bindLanguage(v);
+        bindAccent(v);
         bindTheme(v);
         bindSecurity(v);
         bindReminders(v);
@@ -99,6 +103,42 @@ public class SettingsFragment extends Fragment {
             Prefs.set(requireContext(), Prefs.LANG, next);
             requireActivity().recreate();
         });
+    }
+
+    /** A row of colour discs; the chosen one keeps a ring around it. */
+    private void bindAccent(View v) {
+        LinearLayout row = v.findViewById(R.id.accents);
+        TextView name = v.findViewById(R.id.accentName);
+        Accent chosen = Accent.current(requireContext());
+        name.setText(chosen.labelRes);
+
+        row.removeAllViews();
+        int size = Ui.dp(requireContext(), 40);
+        int ring = Ui.dp(requireContext(), 3);
+
+        for (Accent a : Accent.values()) {
+            View disc = new View(requireContext());
+            GradientDrawable d = new GradientDrawable();
+            d.setShape(GradientDrawable.OVAL);
+            d.setColor(a.swatchColor(requireContext()));
+            if (a == chosen) {
+                d.setStroke(ring, Ui.themeColor(requireContext(),
+                        com.google.android.material.R.attr.colorOnSurface));
+            }
+            disc.setBackground(d);
+            disc.setContentDescription(getString(a.labelRes));
+
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(size, size);
+            lp.setMarginEnd(Ui.dp(requireContext(), 12));
+            disc.setLayoutParams(lp);
+
+            disc.setOnClickListener(x -> {
+                if (a == Accent.current(requireContext())) return;
+                Accent.set(requireContext(), a);
+                requireActivity().recreate();
+            });
+            row.addView(disc);
+        }
     }
 
     private void bindTheme(View v) {

@@ -11,7 +11,18 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class Db extends SQLiteOpenHelper {
 
     public static final String NAME = "mihakk.db";
-    public static final int VERSION = 1;
+    public static final int VERSION = 2;
+
+    /**
+     * The columns that carry confidential manuscript material. These are stored
+     * encrypted; everything else — dates, status, journal, counts — stays in
+     * plaintext so the deadline check, sorting and the statistics can all run in
+     * SQL without opening the key.
+     */
+    public static final String[] SECRET_COLS = {
+            "title", "authors", "editor", "manuscript_id",
+            "report_text", "editor_notes", "notes", "checklist_state", "tags"
+    };
 
     public static final String T_REVIEWS = "reviews";
     public static final String T_JOURNALS = "journals";
@@ -97,6 +108,39 @@ public class Db extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {
-        // v1 is the first release; future migrations get their own branches here.
+        if (oldV < 2) encryptExistingRows(db);
+    }
+
+    /**
+     * v1 stored the confidential columns in the clear. Re-write them through
+     * {@link Crypto}; values already tagged are skipped, so an interrupted
+     * migration can simply run again.
+     */
+    private void encryptExistingRows(SQLiteDatabase db) {
+        db.beginTransaction();
+        try (android.database.Cursor c = db.rawQuery(
+                "SELECT _id, " + String.join(", ", SECRET_COLS) + " FROM " + T_REVIEWS, null)) {
+            while (c.moveToNext()) {
+                android.content.ContentValues v = new android.content.ContentValues();
+                boolean any = false;
+                for (String col : SECRET_COLS) {
+                    int i = c.getColumnIndex(col);
+                    if (i < 0 || c.isNull(i)) continue;
+                    String plain = c.getString(i);
+                    if (plain == null || plain.isEmpty() || Crypto.isEncrypted(plain)) continue;
+                    v.put(col, Crypto.encrypt(plain));
+                    any = true;
+                }
+                if (any) {
+                    db.update(T_REVIEWS, v, "_id=?",
+                            new String[]{String.valueOf(c.getLong(0))});
+                }
+            }
+            db.setTransactionSuccessful();
+        } catch (Exception e) {
+            android.util.Log.e("MihakkDb", "encryption migration failed", e);
+        } finally {
+            db.endTransaction();
+        }
     }
 }

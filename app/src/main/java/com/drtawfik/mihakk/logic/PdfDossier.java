@@ -34,7 +34,6 @@ public class PdfDossier {
 
     private static final int INK = 0xFF1A1D21;
     private static final int MUTED = 0xFF6B7280;
-    private static final int ACCENT = 0xFFB4881F;
     private static final int RULE = 0xFFDDDDDD;
 
     private final Context ctx;
@@ -42,17 +41,34 @@ public class PdfDossier {
     private final Stats stats;
     private final boolean rtl;
 
+    /** The accent chosen in Settings, so the printed record matches the app. */
+    private final int ACCENT;
+    private final int ACCENT_PALE;   // bar track
+    private final int ACCENT_WASH;   // summary tiles
+
     private PdfDocument doc;
     private PdfDocument.Page page;
     private Canvas canvas;
     private int y;
     private int pageNo;
 
-    public PdfDossier(Context ctx, Repo repo, Stats stats, boolean rtl) {
+    public PdfDossier(Context ctx, Repo repo, Stats stats, boolean rtl, int accent) {
         this.ctx = ctx;
         this.repo = repo;
         this.stats = stats;
         this.rtl = rtl;
+        this.ACCENT = accent;
+        this.ACCENT_PALE = towardsWhite(accent, 0.72f);
+        this.ACCENT_WASH = towardsWhite(accent, 0.93f);
+    }
+
+    /** Mixes a colour with white — a printable tint of whatever accent is set. */
+    private static int towardsWhite(int color, float amount) {
+        int r = (color >> 16) & 0xFF, g = (color >> 8) & 0xFF, b = color & 0xFF;
+        r = Math.round(r + (255 - r) * amount);
+        g = Math.round(g + (255 - g) * amount);
+        b = Math.round(b + (255 - b) * amount);
+        return 0xFF000000 | (r << 16) | (g << 8) | b;
     }
 
     public File write(File outFile, String rangeLabel) throws Exception {
@@ -112,7 +128,7 @@ public class PdfDossier {
         ensure(rows * 46 + 10);
 
         Paint box = new Paint(Paint.ANTI_ALIAS_FLAG);
-        box.setColor(0xFFF7F4EC);
+        box.setColor(ACCENT_WASH);
 
         for (int i = 0; i < cells.length; i++) {
             int r = i / cols, c = i % cols;
@@ -142,7 +158,7 @@ public class PdfDossier {
             drawAt(yr, MARGIN, y, 60, 10, INK, true);
             int barLeft = MARGIN + 62;
             int barMax = CONTENT_W - 62 - 40;
-            bar.setColor(0xFFEDE3C8);
+            bar.setColor(ACCENT_PALE);
             canvas.drawRect(barLeft, y + 1, barLeft + barMax, y + 11, bar);
             bar.setColor(ACCENT);
             canvas.drawRect(barLeft, y + 1, barLeft + Math.max(2, barMax * n / max), y + 11, bar);

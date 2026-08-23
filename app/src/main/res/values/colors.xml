@@ -1,26 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Touchstone palette: assayed gold against dark slate. -->
-    <color name="gold">#B4881F</color>
-    <color name="gold_deep">#8A6512</color>
-    <color name="gold_soft">#EDE3C8</color>
-    <color name="cream">#F7F4EC</color>
-
+    <!-- Neutral shell. The accent themes below supply the hue; keeping the page
+         itself close to neutral is what lets six very different accents all look
+         deliberate rather than like six different apps. -->
+    <color name="paper">#FAF9F7</color>
+    <color name="surface">#FFFFFF</color>
     <color name="ink">#1A1D21</color>
     <color name="ink_muted">#6B7280</color>
-    <color name="surface">#FFFFFF</color>
-    <color name="surface_alt">#F4F2EC</color>
-    <color name="outline">#DCD8CE</color>
+    <color name="outline">#E0DEDA</color>
 
     <color name="dark_bg">#14161A</color>
     <color name="dark_surface">#1D2025</color>
-    <color name="dark_surface_alt">#262A30</color>
     <color name="dark_ink">#ECEAE4</color>
     <color name="dark_muted">#9AA0A8</color>
     <color name="dark_outline">#343A42</color>
 
+    <!-- status colours, shared by every theme -->
     <color name="danger">#C0392B</color>
     <color name="warn">#D98324</color>
     <color name="ok">#2E7D52</color>
-    <color name="info">#2F6FB0</color>
+
+    <!-- ============================ accent palettes ============================ -->
+    <!-- gold — the touchstone default -->
+    <color name="a_gold">#B4881F</color>
+    <color name="a_gold_container">#F0E4C6</color>
+    <color name="a_gold_on_container">#5C440A</color>
+    <color name="a_gold_tint">#F5F1E7</color>
+    <color name="a_gold_d">#D8AB45</color>
+    <color name="a_gold_d_container">#4A3A12</color>
+    <color name="a_gold_d_on_container">#F0DFB4</color>
+
+    <!-- indigo -->
+    <color name="a_indigo">#4A57AE</color>
+    <color name="a_indigo_container">#DEE1F7</color>
+    <color name="a_indigo_on_container">#242C63</color>
+    <color name="a_indigo_tint">#EEEFF6</color>
+    <color name="a_indigo_d">#A3ADF0</color>
+    <color name="a_indigo_d_container">#2B3477</color>
+    <color name="a_indigo_d_on_container">#DEE1F7</color>
+
+    <!-- emerald -->
+    <color name="a_emerald">#1E7A59</color>
+    <color name="a_emerald_container">#CFE9DE</color>
+    <color name="a_emerald_on_container">#0C3F2C</color>
+    <color name="a_emerald_tint">#EBF2EF</color>
+    <color name="a_emerald_d">#6ECFA6</color>
+    <color name="a_emerald_d_container">#154D39</color>
+    <color name="a_emerald_d_on_container">#CFE9DE</color>
+
+    <!-- maroon -->
+    <color name="a_maroon">#A03A50</color>
+    <color name="a_maroon_container">#F5D9DF</color>
+    <color name="a_maroon_on_container">#5A1626</color>
+    <color name="a_maroon_tint">#F6EDEF</color>
+    <color name="a_maroon_d">#E895A6</color>
+    <color name="a_maroon_d_container">#6B2231</color>
+    <color name="a_maroon_d_on_container">#F5D9DF</color>
+
+    <!-- steel blue -->
+    <color name="a_steel">#2C6A9E</color>
+    <color name="a_steel_container">#D3E4F2</color>
+    <color name="a_steel_on_container">#12405E</color>
+    <color name="a_steel_tint">#ECF1F6</color>
+    <color name="a_steel_d">#84BCE8</color>
+    <color name="a_steel_d_container">#17415F</color>
+    <color name="a_steel_d_on_container">#D3E4F2</color>
+
+    <!-- violet -->
+    <color name="a_violet">#6B48A6</color>
+    <color name="a_violet_container">#E6DCF6</color>
+    <color name="a_violet_on_container">#37215C</color>
+    <color name="a_violet_tint">#F1EDF7</color>
+    <color name="a_violet_d">#BCA2EC</color>
+    <color name="a_violet_d_container">#412B6D</color>
+    <color name="a_violet_d_on_container">#E6DCF6</color>
+
+    <!-- graphite — for anyone who wants no hue at all -->
+    <color name="a_graphite">#3F4650</color>
+    <color name="a_graphite_container">#DEE1E6</color>
+    <color name="a_graphite_on_container">#1F242B</color>
+    <color name="a_graphite_tint">#F0F1F3</color>
+    <color name="a_graphite_d">#B4BCC7</color>
+    <color name="a_graphite_d_container">#333A44</color>
+    <color name="a_graphite_d_on_container">#DEE1E6</color>
 </resources>

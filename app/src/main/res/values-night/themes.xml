@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.Mihakk" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">#D8AB45</item>
-        <item name="colorOnPrimary">#241B04</item>
-        <item name="colorPrimaryContainer">#4A3A12</item>
-        <item name="colorOnPrimaryContainer">#F0DFB4</item>
-        <item name="colorSecondary">#D8AB45</item>
-        <item name="colorOnSecondary">#241B04</item>
-        <item name="colorSecondaryContainer">#4A3A12</item>
-        <item name="colorOnSecondaryContainer">#F0DFB4</item>
+    <style name="MihakkBase" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorError">#E57368</item>
         <item name="android:colorBackground">@color/dark_bg</item>
         <item name="colorSurface">@color/dark_surface</item>
-        <item name="colorSurfaceVariant">@color/dark_surface_alt</item>
         <item name="colorOnSurface">@color/dark_ink</item>
         <item name="colorOnSurfaceVariant">@color/dark_muted</item>
         <item name="colorOutline">@color/dark_outline</item>
@@ -21,5 +12,89 @@
         <item name="android:navigationBarColor">@color/dark_bg</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+    </style>
+
+    <style name="Theme.MihakkGold" parent="MihakkBase">
+        <item name="colorPrimary">@color/a_gold_d</item>
+        <item name="colorOnPrimary">#241B04</item>
+        <item name="colorPrimaryContainer">@color/a_gold_d_container</item>
+        <item name="colorOnPrimaryContainer">@color/a_gold_d_on_container</item>
+        <item name="colorSecondary">@color/a_gold_d</item>
+        <item name="colorOnSecondary">#241B04</item>
+        <item name="colorSecondaryContainer">@color/a_gold_d_container</item>
+        <item name="colorOnSecondaryContainer">@color/a_gold_d_on_container</item>
+        <item name="colorSurfaceVariant">#262A30</item>
+    </style>
+
+    <style name="Theme.MihakkIndigo" parent="MihakkBase">
+        <item name="colorPrimary">@color/a_indigo_d</item>
+        <item name="colorOnPrimary">#141A44</item>
+        <item name="colorPrimaryContainer">@color/a_indigo_d_container</item>
+        <item name="colorOnPrimaryContainer">@color/a_indigo_d_on_container</item>
+        <item name="colorSecondary">@color/a_indigo_d</item>
+        <item name="colorOnSecondary">#141A44</item>
+        <item name="colorSecondaryContainer">@color/a_indigo_d_container</item>
+        <item name="colorOnSecondaryContainer">@color/a_indigo_d_on_container</item>
+        <item name="colorSurfaceVariant">#242833</item>
+    </style>
+
+    <style name="Theme.MihakkEmerald" parent="MihakkBase">
+        <item name="colorPrimary">@color/a_emerald_d</item>
+        <item name="colorOnPrimary">#04281B</item>
+        <item name="colorPrimaryContainer">@color/a_emerald_d_container</item>
+        <item name="colorOnPrimaryContainer">@color/a_emerald_d_on_container</item>
+        <item name="colorSecondary">@color/a_emerald_d</item>
+        <item name="colorOnSecondary">#04281B</item>
+        <item name="colorSecondaryContainer">@color/a_emerald_d_container</item>
+        <item name="colorOnSecondaryContainer">@color/a_emerald_d_on_container</item>
+        <item name="colorSurfaceVariant">#1E2A26</item>
+    </style>
+
+    <style name="Theme.MihakkMaroon" parent="MihakkBase">
+        <item name="colorPrimary">@color/a_maroon_d</item>
+        <item name="colorOnPrimary">#3B0A16</item>
+        <item name="colorPrimaryContainer">@color/a_maroon_d_container</item>
+        <item name="colorOnPrimaryContainer">@color/a_maroon_d_on_container</item>
+        <item name="colorSecondary">@color/a_maroon_d</item>
+        <item name="colorOnSecondary">#3B0A16</item>
+        <item name="colorSecondaryContainer">@color/a_maroon_d_container</item>
+        <item name="colorOnSecondaryContainer">@color/a_maroon_d_on_container</item>
+        <item name="colorSurfaceVariant">#2C2126</item>
+    </style>
+
+    <style name="Theme.MihakkSteel" parent="MihakkBase">
+        <item name="colorPrimary">@color/a_steel_d</item>
+        <item name="colorOnPrimary">#07253A</item>
+        <item name="colorPrimaryContainer">@color/a_steel_d_container</item>
+        <item name="colorOnPrimaryContainer">@color/a_steel_d_on_container</item>
+        <item name="colorSecondary">@color/a_steel_d</item>
+        <item name="colorOnSecondary">#07253A</item>
+        <item name="colorSecondaryContainer">@color/a_steel_d_container</item>
+        <item name="colorOnSecondaryContainer">@color/a_steel_d_on_container</item>
+        <item name="colorSurfaceVariant">#1E272F</item>
+    </style>
+
+    <style name="Theme.MihakkViolet" parent="MihakkBase">
+        <item name="colorPrimary">@color/a_violet_d</item>
+        <item name="colorOnPrimary">#231340</item>
+        <item name="colorPrimaryContainer">@color/a_violet_d_container</item>
+        <item name="colorOnPrimaryContainer">@color/a_violet_d_on_container</item>
+        <item name="colorSecondary">@color/a_violet_d</item>
+        <item name="colorOnSecondary">#231340</item>
+        <item name="colorSecondaryContainer">@color/a_violet_d_container</item>
+        <item name="colorOnSecondaryContainer">@color/a_violet_d_on_container</item>
+        <item name="colorSurfaceVariant">#272231</item>
+    </style>
+
+    <style name="Theme.MihakkGraphite" parent="MihakkBase">
+        <item name="colorPrimary">@color/a_graphite_d</item>
+        <item name="colorOnPrimary">#1A1E24</item>
+        <item name="colorPrimaryContainer">@color/a_graphite_d_container</item>
+        <item name="colorOnPrimaryContainer">@color/a_graphite_d_on_container</item>
+        <item name="colorSecondary">@color/a_graphite_d</item>
+        <item name="colorOnSecondary">#1A1E24</item>
+        <item name="colorSecondaryContainer">@color/a_graphite_d_container</item>
+        <item name="colorOnSecondaryContainer">@color/a_graphite_d_on_container</item>
+        <item name="colorSurfaceVariant">#262A30</item>
     </style>
 </resources>

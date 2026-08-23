@@ -37,14 +37,19 @@ public class MainActivity extends BaseActivity {
         fab.setOnClickListener(v ->
                 startActivity(new Intent(this, QuickAddActivity.class)));
 
+        current = state == null ? R.id.nav_today : state.getInt("tab", R.id.nav_today);
+
         BottomNavigationView nav = findViewById(R.id.nav);
+        // Restore the selection before attaching the listener, so this does not
+        // fire a redundant transaction; then apply the tab once, by hand. Doing it
+        // in this order is what keeps the FAB correct after recreate() — a theme or
+        // language change used to come back with the button showing on Settings.
+        nav.setSelectedItemId(current);
         nav.setOnItemSelectedListener(item -> {
             show(item.getItemId());
             return true;
         });
-
-        if (state == null) show(R.id.nav_today);
-        else current = state.getInt("tab", R.id.nav_today);
+        show(current);
 
         askForNotifications();
     }

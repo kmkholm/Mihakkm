@@ -102,7 +102,10 @@ public class Review {
     private static String str(Cursor c, String col) {
         int i = c.getColumnIndex(col);
         if (i < 0 || c.isNull(i)) return "";
-        return c.getString(i);
+        String v = c.getString(i);
+        if (v == null) return "";
+        // Confidential columns come back tagged; everything else passes through.
+        return Crypto.isEncrypted(v) ? Crypto.decrypt(v) : v;
     }
 
     public boolean isOpen() {

@@ -114,6 +114,33 @@
             style="@style/FieldLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="@string/set_accent" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/accents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp" />
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/accentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="12sp" />
+
+        <TextView
+            style="@style/FieldLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="@string/set_theme" />
 
         <com.google.android.material.button.MaterialButtonToggleGroup

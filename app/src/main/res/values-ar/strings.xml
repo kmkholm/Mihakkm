@@ -218,6 +218,14 @@
     <string name="lang_system">حسب النظام</string>
     <string name="lang_ar">العربية</string>
     <string name="lang_en">English</string>
+    <string name="set_accent">اللون</string>
+    <string name="accent_gold">ذهبي المِحَكّ</string>
+    <string name="accent_indigo">نيليّ</string>
+    <string name="accent_emerald">زمرّديّ</string>
+    <string name="accent_steel">أزرق فولاذيّ</string>
+    <string name="accent_maroon">عنّابيّ</string>
+    <string name="accent_violet">بنفسجيّ</string>
+    <string name="accent_graphite">رصاصيّ</string>
     <string name="set_theme">السمة</string>
     <string name="theme_system">حسب النظام</string>
     <string name="theme_light">فاتحة</string>

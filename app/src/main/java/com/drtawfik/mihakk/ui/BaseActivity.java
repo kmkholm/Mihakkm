@@ -20,6 +20,9 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle state) {
         LocaleUtil.applyTheme(this);
+        // Must land before the window is created, or the accent only takes effect
+        // on the next launch.
+        setTheme(Accent.current(this).themeRes);
         super.onCreate(state);
         // Off by default so the screen can be captured; a reviewer who wants the
         // recents thumbnail blanked turns it on in Settings.

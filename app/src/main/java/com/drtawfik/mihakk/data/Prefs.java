@@ -16,6 +16,7 @@ public final class Prefs {
     public static final String ORCID_LAST_SYNC = "orcid_last_sync";
     public static final String LANG = "lang";                 // "" = follow system, "ar", "en"
     public static final String THEME = "theme";               // system | light | dark
+    public static final String ACCENT = "accent";             // see ui.Accent
     public static final String LOCK_PIN = "lock_pin";         // salted hash, empty = off
     public static final String LOCK_SALT = "lock_salt";
     public static final String LOCK_BIOMETRIC = "lock_biometric";

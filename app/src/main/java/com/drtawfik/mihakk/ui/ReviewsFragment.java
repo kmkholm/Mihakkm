@@ -32,11 +32,21 @@ public class ReviewsFragment extends Fragment {
             Review.S_INVITED, Review.S_IN_PROGRESS, Review.S_SUBMITTED, Review.S_DECLINED
     };
 
+    /**
+     * Text search decrypts every row to match against it, so running on each
+     * keystroke made the field drop characters on a large record. Coalesce.
+     */
+    private static final long SEARCH_DELAY_MS = 250;
+
     private ReviewAdapter adapter;
     private TextInputEditText search;
     private ChipGroup filters;
     private TextView empty;
     private String activeFilter = "";
+
+    private final android.os.Handler debounce =
+            new android.os.Handler(android.os.Looper.getMainLooper());
+    private final Runnable doSearch = this::refresh;
 
     @Nullable
     @Override
@@ -58,7 +68,8 @@ public class ReviewsFragment extends Fragment {
             }
 
             public void onTextChanged(CharSequence s, int a, int b, int c) {
-                refresh();
+                debounce.removeCallbacks(doSearch);
+                debounce.postDelayed(doSearch, SEARCH_DELAY_MS);
             }
 
             public void afterTextChanged(Editable s) {
@@ -94,6 +105,12 @@ public class ReviewsFragment extends Fragment {
     public void onResume() {
         super.onResume();
         refresh();
+    }
+
+    @Override
+    public void onDestroyView() {
+        debounce.removeCallbacks(doSearch);
+        super.onDestroyView();
     }
 
     private void refresh() {

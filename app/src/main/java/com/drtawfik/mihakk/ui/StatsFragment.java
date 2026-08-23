@@ -191,7 +191,9 @@ public class StatsFragment extends Fragment {
             File out = new File(dir, "mihakk-record-" + rangeSlug() + ".pdf");
 
             new PdfDossier(requireContext(), new Repo(requireContext()), currentStats(),
-                    LocaleUtil.isArabic(requireContext())).write(out, rangeLabel());
+                    LocaleUtil.isArabic(requireContext()),
+                    Accent.current(requireContext()).swatchColor(requireContext()))
+                    .write(out, rangeLabel());
 
             Exports.share(requireContext(), Exports.uriFor(requireContext(), out),
                     "application/pdf", getString(R.string.dossier_title));

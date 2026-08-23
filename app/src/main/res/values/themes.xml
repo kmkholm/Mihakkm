@@ -1,27 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.Mihakk" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/gold</item>
-        <item name="colorOnPrimary">#FFFFFF</item>
-        <item name="colorPrimaryContainer">@color/gold_soft</item>
-        <item name="colorOnPrimaryContainer">@color/gold_deep</item>
-        <item name="colorSecondary">@color/gold_deep</item>
-        <item name="colorOnSecondary">#FFFFFF</item>
-        <item name="colorSecondaryContainer">@color/gold_soft</item>
-        <item name="colorOnSecondaryContainer">@color/gold_deep</item>
+    <!-- The shell everything shares. Accent themes below change the hue only, so
+         a colour swap never moves the layout or alters contrast on text. -->
+    <style name="MihakkBase" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorError">@color/danger</item>
-        <item name="android:colorBackground">@color/cream</item>
+        <item name="android:colorBackground">@color/paper</item>
         <item name="colorSurface">@color/surface</item>
-        <item name="colorSurfaceVariant">@color/surface_alt</item>
         <item name="colorOnSurface">@color/ink</item>
         <item name="colorOnSurfaceVariant">@color/ink_muted</item>
         <item name="colorOutline">@color/outline</item>
-        <item name="android:statusBarColor">@color/cream</item>
-        <item name="android:navigationBarColor">@color/cream</item>
+        <item name="android:statusBarColor">@color/paper</item>
+        <item name="android:navigationBarColor">@color/paper</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
     </style>
+
+    <style name="Theme.Mihakk" parent="Theme.MihakkGold" />
+
+    <style name="Theme.MihakkGold" parent="MihakkBase">
+        <item name="colorPrimary">@color/a_gold</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">@color/a_gold_container</item>
+        <item name="colorOnPrimaryContainer">@color/a_gold_on_container</item>
+        <item name="colorSecondary">@color/a_gold</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorSecondaryContainer">@color/a_gold_container</item>
+        <item name="colorOnSecondaryContainer">@color/a_gold_on_container</item>
+        <item name="colorSurfaceVariant">@color/a_gold_tint</item>
+    </style>
+
+    <style name="Theme.MihakkIndigo" parent="MihakkBase">
+        <item name="colorPrimary">@color/a_indigo</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">@color/a_indigo_container</item>
+        <item name="colorOnPrimaryContainer">@color/a_indigo_on_container</item>
+        <item name="colorSecondary">@color/a_indigo</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorSecondaryContainer">@color/a_indigo_container</item>
+        <item name="colorOnSecondaryContainer">@color/a_indigo_on_container</item>
+        <item name="colorSurfaceVariant">@color/a_indigo_tint</item>
+    </style>
+
+    <style name="Theme.MihakkEmerald" parent="MihakkBase">
+        <item name="colorPrimary">@color/a_emerald</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">@color/a_emerald_container</item>
+        <item name="colorOnPrimaryContainer">@color/a_emerald_on_container</item>
+        <item name="colorSecondary">@color/a_emerald</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorSecondaryContainer">@color/a_emerald_container</item>
+        <item name="colorOnSecondaryContainer">@color/a_emerald_on_container</item>
+        <item name="colorSurfaceVariant">@color/a_emerald_tint</item>
+    </style>
+
+    <style name="Theme.MihakkMaroon" parent="MihakkBase">
+        <item name="colorPrimary">@color/a_maroon</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">@color/a_maroon_container</item>
+        <item name="colorOnPrimaryContainer">@color/a_maroon_on_container</item>
+        <item name="colorSecondary">@color/a_maroon</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorSecondaryContainer">@color/a_maroon_container</item>
+        <item name="colorOnSecondaryContainer">@color/a_maroon_on_container</item>
+        <item name="colorSurfaceVariant">@color/a_maroon_tint</item>
+    </style>
+
+    <style name="Theme.MihakkSteel" parent="MihakkBase">
+        <item name="colorPrimary">@color/a_steel</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">@color/a_steel_container</item>
+        <item name="colorOnPrimaryContainer">@color/a_steel_on_container</item>
+        <item name="colorSecondary">@color/a_steel</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorSecondaryContainer">@color/a_steel_container</item>
+        <item name="colorOnSecondaryContainer">@color/a_steel_on_container</item>
+        <item name="colorSurfaceVariant">@color/a_steel_tint</item>
+    </style>
+
+    <style name="Theme.MihakkViolet" parent="MihakkBase">
+        <item name="colorPrimary">@color/a_violet</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">@color/a_violet_container</item>
+        <item name="colorOnPrimaryContainer">@color/a_violet_on_container</item>
+        <item name="colorSecondary">@color/a_violet</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorSecondaryContainer">@color/a_violet_container</item>
+        <item name="colorOnSecondaryContainer">@color/a_violet_on_container</item>
+        <item name="colorSurfaceVariant">@color/a_violet_tint</item>
+    </style>
+
+    <style name="Theme.MihakkGraphite" parent="MihakkBase">
+        <item name="colorPrimary">@color/a_graphite</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">@color/a_graphite_container</item>
+        <item name="colorOnPrimaryContainer">@color/a_graphite_on_container</item>
+        <item name="colorSecondary">@color/a_graphite</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorSecondaryContainer">@color/a_graphite_container</item>
+        <item name="colorOnSecondaryContainer">@color/a_graphite_on_container</item>
+        <item name="colorSurfaceVariant">@color/a_graphite_tint</item>
+    </style>
+
+    <!-- ================================ text ================================ -->
 
     <style name="SectionHeader">
         <item name="android:textSize">13sp</item>
@@ -37,11 +118,5 @@
         <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
         <item name="android:paddingTop">10dp</item>
         <item name="android:paddingBottom">2dp</item>
-    </style>
-
-    <style name="ValueBig">
-        <item name="android:textSize">22sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">?attr/colorPrimary</item>
     </style>
 </resources>

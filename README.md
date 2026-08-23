@@ -68,9 +68,9 @@ invitation acceptance rate, median turnaround, on-time delivery, hours logged, a
 breakdowns by year, journal, publisher and recommendation — filterable by year and
 exportable as a print-ready A4 PDF, a CSV, or an `.ics` of your deadlines.
 
-**Housekeeping.** Arabic and English with full RTL, light and dark themes, optional
-PIN lock with biometric unlock, optional screenshot blocking, and a plain-JSON backup
-so the record outlives the app.
+**Housekeeping.** Arabic and English with full RTL, seven accent colours, light and
+dark themes, optional PIN lock with biometric unlock, optional screenshot blocking,
+and a plain-JSON backup so the record outlives the app.
 
 ---
 
@@ -106,12 +106,28 @@ content; user-written templates go in the database instead.
 
 ## Notes on the security model
 
-The PIN gate is a gate on the screen, not encryption of the store. It is salted and
-stretched so the PIN is not sitting in preferences in the clear, and it keeps a
-colleague who picks up your phone out of your review notes — but a determined
-attacker with the unlocked device and developer access can read the database. If
-you need more than that, the honest answer today is device encryption plus a screen
-lock; encrypting the store itself is the obvious next step.
+**At rest.** The confidential columns — title, manuscript ID, authors, editor, tags,
+private notes, confidential comments, the draft report and the checklist answers —
+are encrypted with AES-256-GCM under a key held in the AndroidKeyStore, hardware
+backed where the device provides it. The key never sits in the app's own files, so
+pulling the database off the device yields ciphertext.
+
+Dates, status, journal name and the ORCID put-code stay in plaintext on purpose:
+the daily deadline check, the sorting and the whole statistics screen run in SQL
+without opening the key, and none of them reveal what you reviewed. The cost is that
+text search cannot use SQL `LIKE` any more — it decrypts and filters in memory, which
+is why the search box is debounced.
+
+**In use.** The PIN gate is a gate on the screen, not a second layer of encryption.
+It is salted and stretched so the PIN is not sitting in preferences in the clear, and
+it keeps a colleague who picks up your phone out of your notes — but the field key is
+usable whenever the app can run, by design, because the reminder has to fire while
+the screen is locked. Binding the key to user authentication is the next step for
+anyone who wants that trade the other way round.
+
+**Backups are not encrypted.** The JSON export is deliberately plain so the record
+outlives the app and can be read by anything. Treat that file like the manuscripts
+themselves.
 
 ## Verified on an emulator (API 34), 2026-08-23
 
