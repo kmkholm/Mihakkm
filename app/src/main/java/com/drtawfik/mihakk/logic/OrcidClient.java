@@ -11,12 +11,13 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
 /**
- * Optional live pull from the ORCID public API.
+ * Live pull from the ORCID public API.
  * <p>
- * ORCID requires an OAuth token even for public data, and issuing one needs a
- * free "public API" client that only the record owner can register. So the
- * primary import path in this app is the record file you download yourself;
- * this class is the convenience path once you have pasted credentials in.
+ * Public data on pub.orcid.org can be read anonymously — no token, no client
+ * registration. So the fetch is tried bare first, and the client-credentials
+ * flow is only a fallback for the day ORCID decides to require one. Asking for
+ * a client id and secret up front was what produced a 401 for people who had
+ * never needed credentials in the first place.
  */
 public final class OrcidClient {
 
@@ -25,11 +26,36 @@ public final class OrcidClient {
 
     public static class ApiException extends Exception {
         public final int code;
+        /** ORCID's own explanation, when it sent one. */
+        public final String detail;
 
-        ApiException(int code, String msg) {
-            super(msg);
+        ApiException(int code, String body) {
+            super(describe(code, body));
             this.code = code;
+            this.detail = describe(code, body);
         }
+
+        public boolean isAuth() {
+            return code == 401 || code == 403;
+        }
+    }
+
+    /** Pulls the human-readable part out of an ORCID error body. */
+    private static String describe(int code, String body) {
+        String fallback = "HTTP " + code;
+        if (body == null || body.trim().isEmpty()) return fallback;
+        try {
+            org.json.JSONObject o = new org.json.JSONObject(body);
+            for (String key : new String[]{
+                    "error_description", "developer-message", "user-message", "error"}) {
+                String v = o.optString(key, "");
+                if (!v.isEmpty()) return fallback + " — " + v;
+            }
+        } catch (Exception ignored) {
+            // not JSON; fall through
+        }
+        String trimmed = body.trim();
+        return trimmed.length() > 160 ? fallback : fallback + " — " + trimmed;
     }
 
     private OrcidClient() {
@@ -56,7 +82,12 @@ public final class OrcidClient {
             int code = c.getResponseCode();
             String body = read(code >= 400 ? c.getErrorStream() : c.getInputStream());
             if (code >= 400) throw new ApiException(code, body);
-            return new org.json.JSONObject(body).optString("access_token", "");
+
+            String token = new org.json.JSONObject(body).optString("access_token", "");
+            // A 200 with no token would otherwise surface later as an unexplained
+            // 401 on the next call; fail here, where the cause is visible.
+            if (token.isEmpty()) throw new ApiException(code, body);
+            return token;
         } finally {
             c.disconnect();
         }

@@ -2,6 +2,7 @@ package com.drtawfik.mihakk.logic;
 
 import android.content.Context;
 
+import com.drtawfik.mihakk.data.IssnDirectory;
 import com.drtawfik.mihakk.data.Journal;
 import com.drtawfik.mihakk.data.Repo;
 import com.drtawfik.mihakk.data.Review;
@@ -45,8 +46,8 @@ public final class OrcidImporter {
         for (OrcidParser.Entry e : entries) {
             if (e.putCode.isEmpty()) continue;
 
-            String label = resolveJournal(e, known);
-            registerJournal(repo, known, label, e);
+            String label = resolveJournal(ctx, e, known);
+            registerJournal(ctx, repo, known, label, e);
             Long id = existing.get(e.putCode);
 
             if (id != null) {
@@ -96,9 +97,15 @@ public final class OrcidImporter {
      * per-publisher and per-quartile breakdowns work later: the reviewer only has
      * to add the quartile once per journal, not once per review.
      */
-    private static void registerJournal(Repo repo, List<Journal> known,
+    private static void registerJournal(Context ctx, Repo repo, List<Journal> known,
                                         String label, OrcidParser.Entry e) {
         if (label == null || label.trim().isEmpty()) return;
+
+        // The directory's publisher is the real one; ORCID's convening organisation
+        // is whoever deposited the record, which is not the same thing.
+        IssnDirectory.Entry dir = IssnDirectory.lookup(ctx, e.issn);
+        String publisher = (dir != null && !dir.publisher.isEmpty())
+                ? dir.publisher : e.organization;
 
         Journal existing = null;
         for (Journal j : known) if (j.name.equalsIgnoreCase(label)) existing = j;
@@ -107,7 +114,7 @@ public final class OrcidImporter {
             Journal j = new Journal();
             j.name = label;
             j.issn = e.issn;
-            j.publisher = e.organization;
+            j.publisher = publisher;
             repo.saveJournal(j);
             known.add(j);
             return;
@@ -118,22 +125,35 @@ public final class OrcidImporter {
             existing.issn = e.issn;
             dirty = true;
         }
-        if (existing.publisher.isEmpty() && !e.organization.isEmpty()) {
-            existing.publisher = e.organization;
+        if (existing.publisher.isEmpty() && !publisher.isEmpty()) {
+            existing.publisher = publisher;
             dirty = true;
         }
         if (dirty) repo.saveJournal(existing);
     }
 
-    /** Prefer a journal already in the registry with this ISSN over ORCID's own label. */
-    private static String resolveJournal(OrcidParser.Entry e, List<Journal> known) {
+    /**
+     * Works out what to call the journal, best source first:
+     * a name the reviewer already gave this ISSN, then the built-in ISSN
+     * directory, then whatever ORCID offered, and finally the bare ISSN.
+     * <p>
+     * The bare ISSN is deliberately preferred over ORCID's platform name: on a
+     * real record every entry says "Clarivate PLC" or "Elsevier Editorial", and
+     * an ISSN the reviewer can rename once beats a publisher name that is wrong
+     * for hundreds of rows.
+     */
+    private static String resolveJournal(Context ctx, OrcidParser.Entry e, List<Journal> known) {
         if (!e.issn.isEmpty()) {
             String want = e.issn.replace("-", "").toLowerCase();
             for (Journal j : known) {
                 if (j.issn == null || j.issn.isEmpty()) continue;
                 if (j.issn.replace("-", "").toLowerCase().contains(want)) return j.name;
             }
+            IssnDirectory.Entry known2 = IssnDirectory.lookup(ctx, e.issn);
+            if (known2 != null && !known2.title.isEmpty()) return known2.title;
         }
+        if (!e.subject.isEmpty()) return e.subject;
+        if (!e.issn.isEmpty()) return e.issn;
         return e.journalLabel();
     }
 

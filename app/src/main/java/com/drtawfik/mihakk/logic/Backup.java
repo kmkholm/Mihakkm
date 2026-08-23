@@ -74,7 +74,7 @@ public final class Backup {
 
     /** Merges into the current store; ORCID rows dedupe on put-code. */
     public static RestoreResult restore(Context ctx, String json) throws Exception {
-        JSONObject root = new JSONObject(json);
+        JSONObject root = new JSONObject(OrcidParser.clean(json));
         Repo repo = new Repo(ctx);
         RestoreResult res = new RestoreResult();
 

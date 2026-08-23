@@ -63,9 +63,24 @@ public final class OrcidParser {
 
     public static List<Entry> parse(String json) throws Exception {
         List<Entry> out = new ArrayList<>();
-        Object root = new org.json.JSONTokener(json).nextValue();
+        Object root = new org.json.JSONTokener(clean(json)).nextValue();
         walk(root, out);
         return out;
+    }
+
+    /**
+     * Files saved on Windows routinely start with a UTF-8 byte-order mark, which
+     * the JSON tokeniser rejects with an unhelpful error. Strip it, and any
+     * leading whitespace, before parsing.
+     */
+    static String clean(String json) {
+        if (json == null) return "";
+        int i = 0;
+        while (i < json.length()
+                && (json.charAt(i) == '﻿' || Character.isWhitespace(json.charAt(i)))) {
+            i++;
+        }
+        return json.substring(i);
     }
 
     private static void walk(Object node, List<Entry> out) {

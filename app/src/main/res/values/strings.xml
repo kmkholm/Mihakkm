@@ -184,6 +184,8 @@
     <string name="j_reviews">%1$d reviews</string>
     <string name="journals_empty">Journals appear here as soon as you log a review.</string>
     <string name="journal_edit">Journal details</string>
+    <string name="journal_renamed">%1$d reviews moved to “%2$s”.</string>
+    <string name="journal_unnamed_hint">Rows named as a bare ISSN came from ORCID, which does not record the journal title. Tap one and give it a name — every review under it follows.</string>
 
     <!-- orcid -->
     <string name="orcid_title">ORCID sync</string>
@@ -192,7 +194,9 @@
     <string name="orcid_import_file">Import a record file</string>
     <string name="orcid_import_file_help">On orcid.org open your record, choose the download option, and pick the JSON file here. Works with no network.</string>
     <string name="orcid_fetch">Fetch over the network</string>
-    <string name="orcid_fetch_help">Needs a free ORCID public-API client. Paste its ID and secret below.</string>
+    <string name="orcid_fetch_help">Enter your ORCID iD above and press Fetch — public records are read without any credentials. The two fields below stay empty unless ORCID refuses that.</string>
+    <string name="orcid_auth_needed">ORCID would not serve the record without credentials (%1$s). Register a free Public API client at orcid.org, then paste its ID and secret below and try again.</string>
+    <string name="orcid_not_readable">ORCID replied with something this app could not read. Use the file import instead.</string>
     <string name="orcid_client_id">Public API client ID</string>
     <string name="orcid_client_secret">Client secret</string>
     <string name="orcid_result">Added %1$d, updated %2$d, from %3$d records found.</string>

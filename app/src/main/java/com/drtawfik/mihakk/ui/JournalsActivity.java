@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -86,8 +87,16 @@ public class JournalsActivity extends BaseActivity {
                 .setView(form)
                 .setNegativeButton(R.string.cancel, null)
                 .setPositiveButton(R.string.action_save, (d, w) -> {
+                    String previous = j.name;
                     j.name = name.getText().toString().trim();
                     if (j.name.isEmpty()) return;
+                    // Naming an ISSN here is how an ORCID import gets readable
+                    // journals, so the rename has to reach the reviews too.
+                    int moved = repo.renameJournal(previous, j.name);
+                    if (moved > 0) {
+                        Toast.makeText(this, getString(R.string.journal_renamed, moved, j.name),
+                                Toast.LENGTH_LONG).show();
+                    }
                     j.publisher = publisher.getText().toString().trim();
                     j.issn = issn.getText().toString().trim();
                     j.indexing = indexing.getText().toString().trim();

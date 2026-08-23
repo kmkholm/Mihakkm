@@ -98,6 +98,11 @@ public class OrcidActivity extends BaseActivity {
 
     // ------------------------------------------------------ network fetch
 
+    /**
+     * Anonymous read first. ORCID serves public data on pub.orcid.org without a
+     * token, so credentials are only reached for if that is refused — which is
+     * what stops someone who never registered a client from seeing a 401.
+     */
     private void fetch() {
         String id = text(orcidId);
         if (id.isEmpty()) {
@@ -105,10 +110,6 @@ public class OrcidActivity extends BaseActivity {
             return;
         }
         String cid = text(clientId), secret = text(clientSecret);
-        if (cid.isEmpty() || secret.isEmpty()) {
-            result.setText(R.string.orcid_need_creds);
-            return;
-        }
         Prefs.set(this, Prefs.ORCID_ID, id);
         Prefs.set(this, Prefs.ORCID_CLIENT_ID, cid);
         Prefs.set(this, Prefs.ORCID_CLIENT_SECRET, secret);
@@ -117,12 +118,24 @@ public class OrcidActivity extends BaseActivity {
         Handler main = new Handler(Looper.getMainLooper());
         Executors.newSingleThreadExecutor().execute(() -> {
             try {
-                String token = OrcidClient.token(cid, secret);
-                String json = OrcidClient.peerReviews(id, token);
-                main.post(() -> apply(json));
+                String json;
+                try {
+                    json = OrcidClient.peerReviews(id, "");
+                } catch (OrcidClient.ApiException anon) {
+                    if (!anon.isAuth()) throw anon;
+                    if (cid.isEmpty() || secret.isEmpty()) {
+                        main.post(() -> result.setText(getString(R.string.orcid_auth_needed,
+                                anon.detail)));
+                        return;
+                    }
+                    String token = OrcidClient.token(cid, secret);
+                    json = OrcidClient.peerReviews(id, token);
+                }
+                final String body = json;
+                main.post(() -> apply(body));
             } catch (Exception e) {
                 String msg = e instanceof OrcidClient.ApiException
-                        ? "HTTP " + ((OrcidClient.ApiException) e).code
+                        ? ((OrcidClient.ApiException) e).detail
                         : String.valueOf(e.getMessage());
                 main.post(() -> result.setText(getString(R.string.orcid_failed, msg)));
             }
@@ -139,6 +152,9 @@ public class OrcidActivity extends BaseActivity {
             result.setText(getString(R.string.orcid_result, r.added, r.updated, r.seen));
             Prefs.set(this, Prefs.ORCID_LAST_SYNC, DateUtil.today());
             paintLastSync();
+        } catch (org.json.JSONException e) {
+            // Usually XML: ORCID falls back to it when JSON was not negotiated.
+            result.setText(R.string.orcid_not_readable);
         } catch (Exception e) {
             result.setText(getString(R.string.orcid_failed, String.valueOf(e.getMessage())));
         }

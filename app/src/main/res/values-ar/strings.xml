@@ -188,6 +188,8 @@
     <string name="j_reviews">%1$d مراجعة</string>
     <string name="journals_empty">تظهر المجلات هنا فور تسجيل أول مراجعة.</string>
     <string name="journal_edit">بيانات المجلة</string>
+    <string name="journal_renamed">نُقلت %1$d مراجعة إلى «%2$s».</string>
+    <string name="journal_unnamed_hint">الصفوف المسمّاة برقم ISSN مجرّد أتت من ORCID، وهو لا يسجّل عنوان المجلة. اضغط أحدها وسمِّه، فتتبعه كل مراجعاته.</string>
 
     <!-- orcid -->
     <string name="orcid_title">مزامنة ORCID</string>
@@ -196,7 +198,9 @@
     <string name="orcid_import_file">استيراد ملف السجل</string>
     <string name="orcid_import_file_help">من موقع orcid.org افتح ملفّك واختر التنزيل، ثم اختر ملف JSON هنا. يعمل بلا اتصال.</string>
     <string name="orcid_fetch">الجلب عبر الشبكة</string>
-    <string name="orcid_fetch_help">يحتاج عميل واجهة ORCID العامة (مجاني). الصق معرّفه وسرّه أدناه.</string>
+    <string name="orcid_fetch_help">أدخل معرّف ORCID أعلاه واضغط «الجلب» — تُقرأ السجلات العامة بلا أي بيانات اعتماد. ويبقى الحقلان أدناه فارغَين ما لم يرفض ORCID ذلك.</string>
+    <string name="orcid_auth_needed">رفض ORCID تقديم السجل بلا بيانات اعتماد (%1$s). سجّل عميل واجهة عامة مجانياً في orcid.org، ثم الصق معرّفه وسرّه أدناه وأعد المحاولة.</string>
+    <string name="orcid_not_readable">ردّ ORCID بما لا يستطيع التطبيق قراءته. استخدم استيراد الملف بدلًا من ذلك.</string>
     <string name="orcid_client_id">معرّف العميل</string>
     <string name="orcid_client_secret">السرّ</string>
     <string name="orcid_result">أُضيفت %1$d وحُدّثت %2$d من أصل %3$d سجلًا.</string>

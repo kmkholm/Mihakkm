@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "note": "ISSN to journal title. ORCID peer-review records name the depositing platform (Clarivate, Elsevier Editorial, Springer Nature) rather than the venue, so the ISSN in review-group-id is the only reliable key. Titles resolved from Crossref; an ISSN that is not here shows as the ISSN itself, which is honest, and can be named once in the journal registry.",
+  "journals": {
+    "2169-3536": {"title": "IEEE Access", "publisher": "IEEE"},
+    "2327-4662": {"title": "IEEE Internet of Things Journal", "publisher": "IEEE"},
+    "1558-4127": {"title": "IEEE Transactions on Consumer Electronics", "publisher": "IEEE"},
+
+    "2045-2322": {"title": "Scientific Reports", "publisher": "Springer Nature"},
+    "1573-7543": {"title": "Cluster Computing", "publisher": "Springer Nature"},
+    "2730-7239": {"title": "Discover Internet of Things", "publisher": "Springer Nature"},
+    "2948-2992": {"title": "Discover Computing", "publisher": "Springer Nature"},
+    "2213-1248": {"title": "Journal of King Saud University — Computer and Information Sciences", "publisher": "Springer Nature"},
+    "3004-9261": {"title": "Discover Applied Sciences", "publisher": "Springer Nature"},
+    "1936-6450": {"title": "Peer-to-Peer Networking and Applications", "publisher": "Springer Nature"},
+    "1866-9964": {"title": "Cognitive Computation", "publisher": "Springer Nature"},
+    "2199-4676": {"title": "Journal of Reliable Intelligent Environments", "publisher": "Springer Nature"},
+    "2731-0809": {"title": "Discover Artificial Intelligence", "publisher": "Springer Nature"},
+    "2662-2556": {"title": "Operations Research Forum", "publisher": "Springer Nature"},
+    "1958-9395": {"title": "Annals of Telecommunications", "publisher": "Springer Nature"},
+    "1875-6891": {"title": "International Journal of Computational Intelligence Systems", "publisher": "Springer Nature"},
+    "2196-1115": {"title": "Journal of Big Data", "publisher": "Springer Nature"},
+    "1868-5145": {"title": "Journal of Ambient Intelligence and Humanized Computing", "publisher": "Springer Nature"},
+
+    "2214-2126": {"title": "Journal of Information Security and Applications", "publisher": "Elsevier"},
+    "0952-1976": {"title": "Engineering Applications of Artificial Intelligence", "publisher": "Elsevier"},
+    "0950-7051": {"title": "Knowledge-Based Systems", "publisher": "Elsevier"},
+    "2542-6605": {"title": "Internet of Things", "publisher": "Elsevier"},
+    "0957-4174": {"title": "Expert Systems with Applications", "publisher": "Elsevier"},
+    "2589-0042": {"title": "iScience", "publisher": "Elsevier"},
+    "2773-1863": {"title": "Franklin Open", "publisher": "Elsevier"},
+    "2590-2911": {"title": "Social Sciences & Humanities Open", "publisher": "Elsevier"},
+    "2590-0056": {"title": "Array", "publisher": "Elsevier"},
+    "0951-8320": {"title": "Reliability Engineering & System Safety", "publisher": "Elsevier"},
+    "1566-2535": {"title": "Information Fusion", "publisher": "Elsevier"},
+    "1568-4946": {"title": "Applied Soft Computing", "publisher": "Elsevier"},
+    "0045-7906": {"title": "Computers & Electrical Engineering", "publisher": "Elsevier"},
+    "2590-1230": {"title": "Results in Engineering", "publisher": "Elsevier"},
+
+    "2073-8994": {"title": "Symmetry", "publisher": "MDPI"},
+    "1464-522X": {"title": "Journal of Medical Engineering & Technology", "publisher": "Taylor & Francis"},
+    "1939-3547": {"title": "Information Security Journal: A Global Perspective", "publisher": "Taylor & Francis"},
+    "1664-1078": {"title": "Frontiers in Psychology", "publisher": "Frontiers"},
+    "1744-0092": {"title": "International Journal of Web Information Systems", "publisher": "Emerald"},
+    "2709-5916": {"title": "Journal of Information Technology and Computing", "publisher": "SABA Publishing"},
+    "2709-5908": {"title": "Journal of Applied Artificial Intelligence", "publisher": "SABA Publishing"}
+  }
+}

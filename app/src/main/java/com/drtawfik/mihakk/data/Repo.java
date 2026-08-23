@@ -205,6 +205,22 @@ public final class Repo {
         db.delete(Db.T_JOURNALS, "_id=?", new String[]{String.valueOf(id)});
     }
 
+    /**
+     * Carries a journal rename onto every review that used the old name.
+     * <p>
+     * Reviews store the journal name directly, so without this an import that
+     * labelled hundreds of rows with a bare ISSN would keep showing the ISSN
+     * after the reviewer named it. Returns how many rows moved.
+     */
+    public int renameJournal(String oldName, String newName) {
+        if (oldName == null || newName == null) return 0;
+        if (oldName.trim().isEmpty() || oldName.equalsIgnoreCase(newName)) return 0;
+        ContentValues v = new ContentValues();
+        v.put("journal_name", newName);
+        return db.update(Db.T_REVIEWS, v, "journal_name=? COLLATE NOCASE",
+                new String[]{oldName});
+    }
+
     public List<Journal> journals() {
         List<Journal> out = new ArrayList<>();
         String sql = "SELECT j.*, (SELECT COUNT(*) FROM " + Db.T_REVIEWS + " r"
