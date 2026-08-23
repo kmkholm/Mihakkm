@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Touchstone palette: assayed gold against dark slate. -->
+    <color name="gold">#B4881F</color>
+    <color name="gold_deep">#8A6512</color>
+    <color name="gold_soft">#EDE3C8</color>
+    <color name="cream">#F7F4EC</color>
+
+    <color name="ink">#1A1D21</color>
+    <color name="ink_muted">#6B7280</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_alt">#F4F2EC</color>
+    <color name="outline">#DCD8CE</color>
+
+    <color name="dark_bg">#14161A</color>
+    <color name="dark_surface">#1D2025</color>
+    <color name="dark_surface_alt">#262A30</color>
+    <color name="dark_ink">#ECEAE4</color>
+    <color name="dark_muted">#9AA0A8</color>
+    <color name="dark_outline">#343A42</color>
+
+    <color name="danger">#C0392B</color>
+    <color name="warn">#D98324</color>
+    <color name="ok">#2E7D52</color>
+    <color name="info">#2F6FB0</color>
+</resources>

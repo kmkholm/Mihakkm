@@ -1,0 +1,606 @@
+{
+  "version": 1,
+  "note": "Original reviewer-facing appraisal questions written for Mihakk. Informed by the public reporting guidelines named in each checklist; no guideline text is reproduced.",
+  "checklists": [
+    {
+      "key": "general-paper",
+      "name_en": "Any manuscript — general appraisal",
+      "name_ar": "أي مخطوطة — تقييم عام",
+      "study_type": "general",
+      "guideline": "COPE ethical guidelines for peer reviewers",
+      "source_url": "https://publicationethics.org/resources/guidelines/cope-ethical-guidelines-peer-reviewers",
+      "summary_en": "Start here when no specific design applies, or run it alongside a design-specific list.",
+      "summary_ar": "ابدأ بها حين لا ينطبق تصميم بعينه، أو استخدمها إلى جانب قائمة خاصة بالتصميم.",
+      "sections": [
+        {
+          "title_en": "Contribution",
+          "title_ar": "الإسهام",
+          "items": [
+            {"id": "gen-c1", "weight": "critical",
+             "text_en": "Can you state the paper's contribution in one sentence, using only what the manuscript itself claims?",
+             "text_ar": "هل تستطيع صوغ إسهام البحث في جملة واحدة اعتمادًا على ما تدّعيه المخطوطة نفسها فقط؟",
+             "hint_en": "If you cannot, the contribution is either absent or buried — say which.",
+             "hint_ar": "إن عجزت، فالإسهام إمّا غائب وإمّا مطمور، فبيّن أيّهما."},
+            {"id": "gen-c2", "weight": "critical",
+             "text_en": "Is the advance over the closest prior work stated explicitly, and is that prior work actually the closest?",
+             "text_ar": "هل صُرِّح بوجه التقدّم على أقرب عمل سابق، وهل ذلك العمل هو الأقرب فعلًا؟",
+             "hint_en": "A red flag is a related-work section that surveys the field but never names a direct competitor.",
+             "hint_ar": "من علامات الخلل قسمُ أعمالٍ سابقة يمسح المجال دون أن يسمّي منافسًا مباشرًا."},
+            {"id": "gen-c3", "weight": "major",
+             "text_en": "Do the conclusions stay inside what the results support, or do they widen in the discussion?",
+             "text_ar": "هل تبقى الاستنتاجات داخل ما تسنده النتائج، أم تتوسّع في المناقشة؟",
+             "hint_en": "Watch for causal language attached to correlational or single-dataset evidence.",
+             "hint_ar": "انتبه للغة السببية الملحقة بأدلة ارتباطية أو بمجموعة بيانات واحدة."},
+            {"id": "gen-c4", "weight": "major",
+             "text_en": "Are the limitations the authors list the ones that actually threaten the claim, or only cosmetic ones?",
+             "text_ar": "هل القيود التي ذكرها المؤلفون هي التي تهدّد الدعوى فعلًا، أم قيود شكلية فحسب؟"},
+            {"id": "gen-c5", "weight": "minor",
+             "text_en": "Would the abstract, read alone, give an accurate picture of what was done and found?",
+             "text_ar": "لو قُرئ الملخّص وحده، أيعطي صورة دقيقة عمّا أُنجز وما وُجد؟"}
+          ]
+        },
+        {
+          "title_en": "Method and evidence",
+          "title_ar": "المنهجية والأدلة",
+          "items": [
+            {"id": "gen-m1", "weight": "critical",
+             "text_en": "Is the method described in enough detail that a competent reader in the field could repeat it?",
+             "text_ar": "أوُصفت المنهجية بتفصيل يكفي ليعيدها قارئ مقتدر في المجال؟",
+             "hint_en": "Name the specific missing parameter rather than saying \"insufficient detail\".",
+             "hint_ar": "سمِّ المعامل الناقص بعينه بدل قول «التفصيل غير كافٍ»."},
+            {"id": "gen-m2", "weight": "critical",
+             "text_en": "Does the evaluation actually test the claim, or does it test something adjacent and easier?",
+             "text_ar": "هل يختبر التقييم الدعوى فعلًا، أم يختبر أمرًا مجاورًا أيسر؟"},
+            {"id": "gen-m3", "weight": "major",
+             "text_en": "Is the comparison baseline current and fairly tuned, or a weak straw man?",
+             "text_ar": "أخطُّ الأساس المقارَن به حديثٌ ومضبوط بإنصاف، أم خصمٌ من قش؟"},
+            {"id": "gen-m4", "weight": "major",
+             "text_en": "Is any statistical claim accompanied by the test used, its assumptions, and a measure of uncertainty?",
+             "text_ar": "أمُصحوبة كلُّ دعوى إحصائية بالاختبار المستخدم وافتراضاته ومقياس لعدم اليقين؟"},
+            {"id": "gen-m5", "weight": "major",
+             "text_en": "Do the numbers in the text, tables and figures agree with each other?",
+             "text_ar": "أتتّفق الأرقام في المتن والجداول والأشكال بعضها مع بعض؟",
+             "hint_en": "Disagreement here is worth flagging even when small — it signals unchecked work.",
+             "hint_ar": "الاختلاف هنا جدير بالتنبيه ولو صغُر، فهو مؤشّر على عمل غير مُراجَع."}
+          ]
+        },
+        {
+          "title_en": "Presentation",
+          "title_ar": "العرض",
+          "items": [
+            {"id": "gen-p1", "weight": "minor",
+             "text_en": "Does every figure earn its space, and can each be understood from its caption alone?",
+             "text_ar": "أيستحقّ كلُّ شكل مساحته، وأيمكن فهمه من تعليقه وحده؟"},
+            {"id": "gen-p2", "weight": "minor",
+             "text_en": "Are axes labelled with units, and are scales chosen so they do not exaggerate an effect?",
+             "text_ar": "أمُعنونة المحاور بوحداتها، وأمُختارة المقاييس بحيث لا تضخّم أثرًا؟"},
+            {"id": "gen-p3", "weight": "minor",
+             "text_en": "Is the English clear enough that meaning is never in doubt? Note specific sentences, not a blanket complaint.",
+             "text_ar": "أاللغة واضحة بحيث لا يلتبس المعنى؟ اذكر جملًا بعينها لا شكوى عامّة."},
+            {"id": "gen-p4", "weight": "minor",
+             "text_en": "Are references current, and is any self-citation proportionate to its relevance?",
+             "text_ar": "أالمراجع حديثة، وهل الاستشهاد الذاتي متناسب مع صلته بالموضوع؟"}
+          ]
+        },
+        {
+          "title_en": "Ethics and integrity",
+          "title_ar": "الأخلاقيات والنزاهة",
+          "items": [
+            {"id": "gen-e1", "weight": "critical",
+             "text_en": "For work with humans or animals, is approval named with the granting body and a reference number?",
+             "text_ar": "في البحوث على البشر أو الحيوان، أذُكرت الموافقة بجهة المنح ورقم المرجع؟"},
+            {"id": "gen-e2", "weight": "major",
+             "text_en": "Are data and code availability statements concrete, or do they promise access \"on reasonable request\" with nothing behind it?",
+             "text_ar": "أبيانات الإتاحة للبيانات والشيفرة محدّدة، أم تَعِد بالإتاحة «عند الطلب المعقول» بلا سند؟"},
+            {"id": "gen-e3", "weight": "major",
+             "text_en": "Do any passages read as though lifted from elsewhere — an abrupt shift in register, or text that does not match the rest?",
+             "text_ar": "أثمّة فقرات تبدو منقولة — تحوّل مفاجئ في الأسلوب أو نصّ لا يشبه سائر البحث؟",
+             "hint_en": "Report it to the editor as a concern to verify, never as an accusation in the report to authors.",
+             "hint_ar": "أبلغ المحرّر بها بوصفها شبهة تستوجب التحقّق، لا اتهامًا في التقرير الموجَّه للمؤلفين."},
+            {"id": "gen-e4", "weight": "minor",
+             "text_en": "If generative AI was used in writing or analysis, is that disclosed as the journal requires?",
+             "text_ar": "إن استُخدم الذكاء الاصطناعي التوليدي في الكتابة أو التحليل، أفصح عنه كما تشترط المجلة؟"},
+            {"id": "gen-e5", "weight": "minor",
+             "text_en": "Do you have a conflict of interest with these authors or this topic that you should declare now?",
+             "text_ar": "أعندك تضارب مصالح مع هؤلاء المؤلفين أو هذا الموضوع يجدر الإفصاح عنه الآن؟"}
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ml-ai-study",
+      "name_en": "Machine learning / AI paper",
+      "name_ar": "بحث تعلُّم آلي / ذكاء اصطناعي",
+      "study_type": "ml",
+      "guideline": "TRIPOD+AI and CLAIM reporting principles",
+      "source_url": "https://www.equator-network.org/reporting-guidelines/tripod-statement/",
+      "summary_en": "For any paper whose central claim rests on a trained model beating something.",
+      "summary_ar": "لكل بحث تقوم دعواه المركزية على تفوّق نموذج مُدرَّب على غيره.",
+      "sections": [
+        {
+          "title_en": "Data provenance",
+          "title_ar": "مصدر البيانات",
+          "items": [
+            {"id": "ml-d1", "weight": "critical",
+             "text_en": "Is the dataset named, versioned, and its licence stated clearly enough for someone else to obtain the same data?",
+             "text_ar": "أمُسمّاة مجموعة البيانات ومحدّدة الإصدار ومبيَّن ترخيصها بما يكفي ليحصل غيرهم على البيانات نفسها؟"},
+            {"id": "ml-d2", "weight": "critical",
+             "text_en": "Are the number of samples, the class balance, and the label source reported — including who labelled and how disagreements were settled?",
+             "text_ar": "أذُكر عدد العيّنات وتوازن الفئات ومصدر الوسم — بمن وسَم وكيف حُسم الاختلاف؟"},
+            {"id": "ml-d3", "weight": "major",
+             "text_en": "If the data concern people, is consent and de-identification addressed rather than assumed?",
+             "text_ar": "إن تعلّقت البيانات بأشخاص، أعُولجت مسألتا الموافقة وإزالة الهوية بدل افتراضهما؟"},
+            {"id": "ml-d4", "weight": "major",
+             "text_en": "Is any preprocessing that uses statistics of the whole dataset — scaling, imputation, feature selection — fitted on the training split only?",
+             "text_ar": "أكلُّ معالجة أوّلية تستعمل إحصاءات المجموعة كاملة — قياس أو استكمال أو انتقاء سمات — مُلائَمة على شقّ التدريب وحده؟",
+             "hint_en": "Scaler fitted before the split is the single most common silent leak in submitted ML papers.",
+             "hint_ar": "ملاءمة المقياس قبل التقسيم أشيع تسريب صامت في بحوث التعلّم الآلي المقدَّمة."}
+          ]
+        },
+        {
+          "title_en": "Leakage and splits",
+          "title_ar": "التسريب والتقسيم",
+          "items": [
+            {"id": "ml-l1", "weight": "critical",
+             "text_en": "Is the train/validation/test split described, and is the test set touched exactly once?",
+             "text_ar": "أوُصف تقسيم التدريب والتحقّق والاختبار، وهل مُسّت مجموعة الاختبار مرّة واحدة فقط؟"},
+            {"id": "ml-l2", "weight": "critical",
+             "text_en": "When several samples come from the same subject, site, session or device, is the split grouped so none of them straddles it?",
+             "text_ar": "حين تأتي عيّنات عدّة من الشخص نفسه أو الموقع أو الجلسة أو الجهاز، أمُجمَّع التقسيم بحيث لا تعبره أيٌّ منها؟",
+             "hint_en": "Subject-wise leakage inflates accuracy dramatically and is invisible in the reported numbers.",
+             "hint_ar": "التسريب على مستوى الأشخاص يضخّم الدقّة تضخيمًا شديدًا ولا يظهر في الأرقام المعلنة."},
+            {"id": "ml-l3", "weight": "critical",
+             "text_en": "For time-ordered data, does the split respect chronology rather than shuffling the future into training?",
+             "text_ar": "في البيانات المرتَّبة زمنيًا، أيحترم التقسيم التسلسل بدل خلط المستقبل في التدريب؟"},
+            {"id": "ml-l4", "weight": "major",
+             "text_en": "If oversampling or synthetic augmentation was used, was it applied after the split and to the training data only?",
+             "text_ar": "إن استُخدمت الزيادة أو التوليد الاصطناعي، أطُبِّق بعد التقسيم وعلى بيانات التدريب وحدها؟",
+             "hint_en": "SMOTE applied before splitting puts near-copies of test rows into training.",
+             "hint_ar": "تطبيق SMOTE قبل التقسيم يضع نسخًا شبه مطابقة لصفوف الاختبار في التدريب."},
+            {"id": "ml-l5", "weight": "major",
+             "text_en": "Were hyperparameters chosen on validation data rather than by watching test performance?",
+             "text_ar": "أاختيرت المعاملات الفائقة على بيانات التحقّق لا بمراقبة أداء الاختبار؟"}
+          ]
+        },
+        {
+          "title_en": "Comparison and evidence",
+          "title_ar": "المقارنة والأدلة",
+          "items": [
+            {"id": "ml-c1", "weight": "critical",
+             "text_en": "Are the baselines the ones a specialist would name, tuned with the same budget as the proposed model?",
+             "text_ar": "أخطوط الأساس هي التي يسمّيها المختصّ، ومضبوطة بالميزانية نفسها الممنوحة للنموذج المقترح؟"},
+            {"id": "ml-c2", "weight": "critical",
+             "text_en": "Are results reported over multiple seeds or folds with dispersion, rather than as a single best run?",
+             "text_ar": "أتُعرض النتائج على بذور أو طيّات متعدّدة مع مقياس تشتّت، لا كأفضل تشغيلة واحدة؟",
+             "hint_en": "A lone number to four decimal places with no variance is not evidence of an improvement.",
+             "hint_ar": "رقم وحيد بأربع منازل عشرية بلا تباين ليس دليلًا على تحسّن."},
+            {"id": "ml-c3", "weight": "major",
+             "text_en": "Is the metric right for the problem — for imbalanced classes, is accuracy doing work that AUPRC or per-class recall should do?",
+             "text_ar": "أالمقياس مناسب للمسألة — في الفئات غير المتوازنة، أتقوم الدقّة بدور ينبغي لمنحنى الاستدعاء والضبط أو الاستدعاء لكل فئة؟"},
+            {"id": "ml-c4", "weight": "major",
+             "text_en": "Is the claimed improvement large enough to matter next to the run-to-run variation you can see in the paper?",
+             "text_ar": "أالتحسّن المدَّعى كبير بما يعتدّ به إزاء التباين بين التشغيلات الظاهر في البحث؟"},
+            {"id": "ml-c5", "weight": "major",
+             "text_en": "Does an ablation isolate the component the paper says is responsible, or only remove parts wholesale?",
+             "text_ar": "أتعزل دراسةُ الاستئصال المكوِّنَ الذي ينسب إليه البحث الفضل، أم تحذف الأجزاء جملةً؟"}
+          ]
+        },
+        {
+          "title_en": "Reproducibility",
+          "title_ar": "قابلية إعادة الإنتاج",
+          "items": [
+            {"id": "ml-r1", "weight": "major",
+             "text_en": "Are architecture, optimiser, learning rate, batch size, epochs and stopping rule all stated?",
+             "text_ar": "أذُكرت البنية والمُحسِّن ومعدّل التعلّم وحجم الدفعة وعدد الحقب وقاعدة التوقّف كلُّها؟"},
+            {"id": "ml-r2", "weight": "major",
+             "text_en": "Is code released, or is there a concrete reason it cannot be?",
+             "text_ar": "أأُتيحت الشيفرة، أم ثمّة سبب محدَّد يمنع إتاحتها؟"},
+            {"id": "ml-r3", "weight": "minor",
+             "text_en": "Is the hardware and the training time reported, so the cost of the result is visible?",
+             "text_ar": "أذُكرت العتاد ومدّة التدريب بحيث تظهر كلفة النتيجة؟"},
+            {"id": "ml-r4", "weight": "minor",
+             "text_en": "If the model is offered for practical use, is its failure behaviour characterised anywhere?",
+             "text_ar": "إن قُدِّم النموذج للاستعمال العملي، أوُصف سلوكه عند الإخفاق في موضع ما؟"}
+          ]
+        }
+      ]
+    },
+    {
+      "key": "security-privacy",
+      "name_en": "Cybersecurity / privacy paper",
+      "name_ar": "بحث أمن سيبراني / خصوصية",
+      "study_type": "security",
+      "guideline": "Common practice in systems-security venues",
+      "source_url": "https://www.usenix.org/conferences/author-resources",
+      "summary_en": "For attack, defence, protocol and measurement papers.",
+      "summary_ar": "لبحوث الهجوم والدفاع والبروتوكولات والقياس.",
+      "sections": [
+        {
+          "title_en": "Threat model",
+          "title_ar": "نموذج التهديد",
+          "items": [
+            {"id": "sec-t1", "weight": "critical",
+             "text_en": "Is the adversary's capability stated precisely — what they observe, what they control, and what they cannot do?",
+             "text_ar": "أحُدِّدت قدرة الخصم بدقّة — ما يراقبه وما يتحكّم فيه وما يعجز عنه؟"},
+            {"id": "sec-t2", "weight": "critical",
+             "text_en": "Do the experiments stay inside that stated threat model, or do they quietly assume a weaker adversary?",
+             "text_ar": "أتبقى التجارب داخل نموذج التهديد المعلن، أم تفترض ضمنًا خصمًا أضعف؟"},
+            {"id": "sec-t3", "weight": "major",
+             "text_en": "Are the trust assumptions listed, including anything the deployment takes on faith?",
+             "text_ar": "أسُردت افتراضات الثقة، بما فيها ما يأخذه النشر على عِلّاته؟"},
+            {"id": "sec-t4", "weight": "major",
+             "text_en": "Is the attack surface bounded — what is explicitly out of scope?",
+             "text_ar": "أمحدود سطحُ الهجوم — ما الذي أُخرج من النطاق صراحةً؟"}
+          ]
+        },
+        {
+          "title_en": "Evaluation realism",
+          "title_ar": "واقعية التقييم",
+          "items": [
+            {"id": "sec-e1", "weight": "critical",
+             "text_en": "Is the evaluation run against defended, current systems rather than obsolete or unhardened ones?",
+             "text_ar": "أأُجري التقييم على أنظمة محميّة وحديثة لا مهجورة أو غير مُقسّاة؟"},
+            {"id": "sec-e2", "weight": "critical",
+             "text_en": "For a detection method, is the false-positive rate reported at a base rate that resembles deployment?",
+             "text_ar": "في طرائق الكشف، أذُكر معدّل الإنذار الكاذب عند معدّل أساس يشبه بيئة النشر؟",
+             "hint_en": "A 1% false-positive rate on a balanced test set can mean thousands of alerts a day in production.",
+             "hint_ar": "معدّل إنذار كاذب ١٪ على مجموعة متوازنة قد يعني آلاف التنبيهات يوميًا في الإنتاج."},
+            {"id": "sec-e3", "weight": "major",
+             "text_en": "Is an adaptive adversary considered — one who knows the defence and works around it?",
+             "text_ar": "أرُوعي خصم متكيّف يعرف الدفاع ويلتفّ عليه؟"},
+            {"id": "sec-e4", "weight": "major",
+             "text_en": "If a public attack dataset is used, is its age and its known artefacts acknowledged?",
+             "text_ar": "إن استُخدمت مجموعة هجمات عامّة، أأُقرّ بعمرها وبآثارها المعروفة؟"}
+          ]
+        },
+        {
+          "title_en": "Claims and proofs",
+          "title_ar": "الدعاوى والبراهين",
+          "items": [
+            {"id": "sec-c1", "weight": "critical",
+             "text_en": "Is every security claim matched by either a proof, a formal analysis, or an experiment — and is it clear which?",
+             "text_ar": "أمقرونة كلُّ دعوى أمنية ببرهان أو تحليل صوري أو تجربة — وأواضحٌ أيُّها؟"},
+            {"id": "sec-c2", "weight": "major",
+             "text_en": "Are standard primitives used as intended rather than reinvented, and are parameters at current recommended strengths?",
+             "text_ar": "أتُستعمل الأوّليات القياسية على وجهها لا مُعاد اختراعها، وأالمعاملات عند القوى الموصى بها حاليًا؟"},
+            {"id": "sec-c3", "weight": "major",
+             "text_en": "Is performance overhead measured against the unprotected baseline on the same hardware?",
+             "text_ar": "أقيست كلفة الأداء إزاء خطّ الأساس غير المحمي على العتاد نفسه؟"}
+          ]
+        },
+        {
+          "title_en": "Research ethics",
+          "title_ar": "أخلاقيات البحث",
+          "items": [
+            {"id": "sec-r1", "weight": "critical",
+             "text_en": "If live systems, real users or scraped data were involved, is there ethical review and a disclosure process?",
+             "text_ar": "إن شملت الدراسة أنظمة حيّة أو مستخدمين حقيقيين أو بيانات مُجمَّعة، أثمّة مراجعة أخلاقية ومسار إفصاح؟"},
+            {"id": "sec-r2", "weight": "major",
+             "text_en": "For a newly found vulnerability, were the affected parties notified before publication?",
+             "text_ar": "في الثغرات المكتشفة حديثًا، أأُبلغت الأطراف المتضرّرة قبل النشر؟"},
+            {"id": "sec-r3", "weight": "minor",
+             "text_en": "Is the level of detail released proportionate — enough to reproduce the science without handing over a turnkey weapon?",
+             "text_ar": "أمستوى التفصيل المنشور متناسب — يكفي لإعادة إنتاج العلم دون تسليم سلاح جاهز؟"}
+          ]
+        }
+      ]
+    },
+    {
+      "key": "engineering-simulation",
+      "name_en": "Engineering / simulation study",
+      "name_ar": "دراسة هندسية / محاكاة",
+      "study_type": "simulation",
+      "guideline": "ASME V&V standards in spirit",
+      "source_url": "https://www.asme.org/codes-standards",
+      "summary_en": "For modelling, numerical and simulation-led papers.",
+      "summary_ar": "لبحوث النمذجة والحساب العددي والمحاكاة.",
+      "sections": [
+        {
+          "title_en": "Model definition",
+          "title_ar": "تعريف النموذج",
+          "items": [
+            {"id": "eng-m1", "weight": "critical",
+             "text_en": "Are the governing equations, boundary conditions and initial conditions all stated?",
+             "text_ar": "أذُكرت المعادلات الحاكمة والشروط الحدّية والشروط الابتدائية كلُّها؟"},
+            {"id": "eng-m2", "weight": "critical",
+             "text_en": "Are the simplifying assumptions listed, with a word on when each stops holding?",
+             "text_ar": "أسُردت فرضيات التبسيط مع بيان متى يبطل كلٌّ منها؟"},
+            {"id": "eng-m3", "weight": "major",
+             "text_en": "Are all material properties and constants given with units and a source?",
+             "text_ar": "أأُعطيت خواصّ المواد والثوابت كلُّها بوحداتها ومصدرها؟"},
+            {"id": "eng-m4", "weight": "major",
+             "text_en": "Is the solver, its version, and its convergence criterion named?",
+             "text_ar": "أذُكر الحلّال وإصداره ومعيار تقاربه؟"}
+          ]
+        },
+        {
+          "title_en": "Verification",
+          "title_ar": "التحقّق العددي",
+          "items": [
+            {"id": "eng-v1", "weight": "critical",
+             "text_en": "Is a mesh or grid independence study shown, not merely asserted?",
+             "text_ar": "أعُرضت دراسة استقلال الشبكة، لا مجرّد ادّعائها؟"},
+            {"id": "eng-v2", "weight": "major",
+             "text_en": "Is the time step or discretisation justified against the relevant stability condition?",
+             "text_ar": "أمُبرَّرة خطوة الزمن أو التقطيع إزاء شرط الاستقرار المناسب؟"},
+            {"id": "eng-v3", "weight": "major",
+             "text_en": "Is a sensitivity analysis run over the parameters the conclusion actually depends on?",
+             "text_ar": "أأُجري تحليل حساسية على المعاملات التي يتوقّف عليها الاستنتاج فعلًا؟"}
+          ]
+        },
+        {
+          "title_en": "Validation",
+          "title_ar": "التصديق",
+          "items": [
+            {"id": "eng-x1", "weight": "critical",
+             "text_en": "Is the model compared against experimental data or an analytical solution, with the discrepancy quantified?",
+             "text_ar": "أقُورن النموذج ببيانات تجريبية أو حلّ تحليلي مع تقدير كمّي للفارق؟"},
+            {"id": "eng-x2", "weight": "major",
+             "text_en": "Is the validation case distinct from any case used to calibrate the model?",
+             "text_ar": "أحالةُ التصديق مغايرة لأي حالة استُخدمت في معايرة النموذج؟"},
+            {"id": "eng-x3", "weight": "major",
+             "text_en": "Is measurement uncertainty in the reference data carried through into the comparison?",
+             "text_ar": "أنُقلت عدمُ يقين القياس في البيانات المرجعية إلى المقارنة؟"},
+            {"id": "eng-x4", "weight": "minor",
+             "text_en": "Are results presented in dimensionless form where that would make them transferable?",
+             "text_ar": "أعُرضت النتائج بصيغة لا بُعدية حيث يجعلها ذلك قابلة للنقل؟"}
+          ]
+        }
+      ]
+    },
+    {
+      "key": "prisma-sr",
+      "name_en": "Systematic review / meta-analysis",
+      "name_ar": "مراجعة منهجية / تحليل بَعدي",
+      "study_type": "systematic_review",
+      "guideline": "PRISMA 2020",
+      "source_url": "https://www.prisma-statement.org/",
+      "summary_en": "For any paper claiming to synthesise a literature systematically.",
+      "summary_ar": "لكل بحث يدّعي تركيب أدبيات المجال منهجيًا.",
+      "sections": [
+        {
+          "title_en": "Protocol and search",
+          "title_ar": "البروتوكول والبحث",
+          "items": [
+            {"id": "sr-p1", "weight": "critical",
+             "text_en": "Was the review registered or a protocol published before the search, and are any departures from it explained?",
+             "text_ar": "أسُجِّلت المراجعة أو نُشر بروتوكولها قبل البحث، وأفُسِّرت أي انحرافات عنه؟"},
+            {"id": "sr-p2", "weight": "critical",
+             "text_en": "Is the full search string given for at least one database, with the dates it was run?",
+             "text_ar": "أأُعطيت سلسلة البحث كاملة لقاعدة بيانات واحدة على الأقل مع تواريخ تنفيذها؟",
+             "hint_en": "Without the string the review cannot be reproduced or updated by anyone.",
+             "hint_ar": "بغير السلسلة لا يستطيع أحد إعادة إنتاج المراجعة ولا تحديثها."},
+            {"id": "sr-p3", "weight": "major",
+             "text_en": "Were multiple databases searched, and was any attempt made to find unpublished or grey literature?",
+             "text_ar": "أبُحث في قواعد بيانات متعدّدة، وهل سُعي إلى الأدبيات غير المنشورة أو الرمادية؟"},
+            {"id": "sr-p4", "weight": "major",
+             "text_en": "Are inclusion and exclusion criteria specific enough that two reviewers would apply them the same way?",
+             "text_ar": "أمعايير الإدراج والاستبعاد محدّدة بما يجعل محكّمَين يطبّقانها التطبيق نفسه؟"}
+          ]
+        },
+        {
+          "title_en": "Selection and extraction",
+          "title_ar": "الانتقاء والاستخلاص",
+          "items": [
+            {"id": "sr-s1", "weight": "critical",
+             "text_en": "Is there a flow diagram accounting for every record from identification to inclusion, with reasons for exclusion at full text?",
+             "text_ar": "أثمّة مخطّط تدفّق يحصي كل سجلّ من التعرّف إلى الإدراج مع أسباب الاستبعاد عند النصّ الكامل؟"},
+            {"id": "sr-s2", "weight": "major",
+             "text_en": "Were screening and extraction done independently by two people, with a stated way of resolving disagreement?",
+             "text_ar": "أأُجري الفرز والاستخلاص باستقلال من شخصين مع طريقة معلنة لحسم الخلاف؟"},
+            {"id": "sr-s3", "weight": "major",
+             "text_en": "Was risk of bias assessed for each included study with a named tool, and does that assessment influence the conclusions?",
+             "text_ar": "أقُوِّم خطر التحيّز لكل دراسة مُدرَجة بأداة مسمّاة، وهل يؤثّر ذلك التقويم في الاستنتاجات؟"}
+          ]
+        },
+        {
+          "title_en": "Synthesis",
+          "title_ar": "التركيب",
+          "items": [
+            {"id": "sr-y1", "weight": "critical",
+             "text_en": "If studies were pooled, is the clinical and methodological similarity enough to justify pooling at all?",
+             "text_ar": "إن جُمعت الدراسات، أالتشابه السريري والمنهجي كافٍ ليبرّر الجمع أصلًا؟"},
+            {"id": "sr-y2", "weight": "major",
+             "text_en": "Is heterogeneity quantified and, where substantial, explored rather than only reported?",
+             "text_ar": "أقُدِّر التغاير كمّيًا، وحين يكون كبيرًا أاستُقصي لا اكتُفي بذكره؟"},
+            {"id": "sr-y3", "weight": "major",
+             "text_en": "Is small-study or publication bias examined when the number of studies makes that meaningful?",
+             "text_ar": "أفُحص تحيّز الدراسات الصغيرة أو النشر حين يكون عدد الدراسات كافيًا لجدوى الفحص؟"},
+            {"id": "sr-y4", "weight": "minor",
+             "text_en": "Is certainty of evidence graded, and does the abstract's confidence match that grade?",
+             "text_ar": "أدُرِّجت درجة اليقين في الأدلة، وهل ثقة الملخّص موافقة لتلك الدرجة؟"}
+          ]
+        }
+      ]
+    },
+    {
+      "key": "strobe-obs",
+      "name_en": "Observational study (cohort, case-control, cross-sectional)",
+      "name_ar": "دراسة رصدية (أتراب، حالات وشواهد، مقطعية)",
+      "study_type": "observational",
+      "guideline": "STROBE",
+      "source_url": "https://www.strobe-statement.org/",
+      "summary_en": "For non-randomised studies of association in human populations.",
+      "summary_ar": "للدراسات غير المعشّاة التي تبحث الارتباط في مجتمعات بشرية.",
+      "sections": [
+        {
+          "title_en": "Design and setting",
+          "title_ar": "التصميم والسياق",
+          "items": [
+            {"id": "obs-d1", "weight": "critical",
+             "text_en": "Is the design named in the abstract, and does the rest of the paper actually describe that design?",
+             "text_ar": "أسُمّي التصميم في الملخّص، وهل يصف سائر البحث ذلك التصميم فعلًا؟"},
+            {"id": "obs-d2", "weight": "critical",
+             "text_en": "Are eligibility criteria and the recruitment source described well enough to judge who is missing?",
+             "text_ar": "أوُصفت معايير الأهلية ومصدر التجنيد بما يكفي للحكم على من غاب عن الدراسة؟"},
+            {"id": "obs-d3", "weight": "major",
+             "text_en": "Are the dates of recruitment, exposure, follow-up and data collection given?",
+             "text_ar": "أأُعطيت تواريخ التجنيد والتعرّض والمتابعة وجمع البيانات؟"}
+          ]
+        },
+        {
+          "title_en": "Bias and confounding",
+          "title_ar": "التحيّز والخلط",
+          "items": [
+            {"id": "obs-b1", "weight": "critical",
+             "text_en": "Are the confounders adjusted for chosen for a stated reason, rather than by stepwise selection on the outcome?",
+             "text_ar": "أاختيرت المتغيّرات المُخلِطة المعدَّل لها لسبب معلن، لا بانتقاء تدريجي على المتغيّر التابع؟"},
+            {"id": "obs-b2", "weight": "critical",
+             "text_en": "Is selection bias addressed — who was approached, who declined, and how they might differ?",
+             "text_ar": "أعُولج تحيّز الانتقاء — من دُعي ومن اعتذر وكيف قد يختلفون؟"},
+            {"id": "obs-b3", "weight": "major",
+             "text_en": "Is missing data quantified and handled by a stated method rather than dropped in silence?",
+             "text_ar": "أقُدِّرت البيانات المفقودة كمّيًا وعوملت بطريقة معلنة لا حُذفت صمتًا؟"},
+            {"id": "obs-b4", "weight": "major",
+             "text_en": "Is exposure measured the same way in all groups, and by someone blind to the outcome where possible?",
+             "text_ar": "أقيس التعرّض بالطريقة نفسها في كل المجموعات، وبمن يجهل النتيجة حيثما أمكن؟"}
+          ]
+        },
+        {
+          "title_en": "Analysis and reporting",
+          "title_ar": "التحليل والعرض",
+          "items": [
+            {"id": "obs-a1", "weight": "critical",
+             "text_en": "Are both unadjusted and adjusted estimates given, with confidence intervals rather than p-values alone?",
+             "text_ar": "أأُعطيت التقديرات المعدَّلة وغير المعدَّلة معًا بفترات ثقة لا بقيم احتمالية وحدها؟"},
+            {"id": "obs-a2", "weight": "major",
+             "text_en": "Is the sample size justified, or at least is the precision of the estimate discussed honestly?",
+             "text_ar": "أبُرِّر حجم العيّنة، أو نوقشت دقّة التقدير مناقشة أمينة على الأقل؟"},
+            {"id": "obs-a3", "weight": "major",
+             "text_en": "Are subgroup analyses declared as exploratory when they were not planned in advance?",
+             "text_ar": "أأُعلنت تحليلات الفئات الفرعية استكشافية حين لم تُخطَّط سلفًا؟"},
+            {"id": "obs-a4", "weight": "critical",
+             "text_en": "Does the discussion stop short of causal language, given the design cannot establish causation?",
+             "text_ar": "أتتجنّب المناقشة اللغة السببية، إذ لا يقيم التصميم سببية؟"}
+          ]
+        }
+      ]
+    },
+    {
+      "key": "consort-rct",
+      "name_en": "Randomised controlled trial",
+      "name_ar": "تجربة معشّاة مضبوطة",
+      "study_type": "rct",
+      "guideline": "CONSORT 2010",
+      "source_url": "https://www.consort-statement.org/",
+      "summary_en": "For prospective trials that allocate participants to arms.",
+      "summary_ar": "للتجارب المستقبلية التي توزّع المشاركين على أذرع.",
+      "sections": [
+        {
+          "title_en": "Randomisation",
+          "title_ar": "التعشية",
+          "items": [
+            {"id": "rct-r1", "weight": "critical",
+             "text_en": "Is the sequence generation method described in enough detail to judge whether allocation was truly random?",
+             "text_ar": "أوُصفت طريقة توليد التسلسل بتفصيل يكفي للحكم بأن التوزيع كان عشوائيًا حقًا؟",
+             "hint_en": "\"Patients were randomised\" with no method is the commonest gap in submitted trials.",
+             "hint_ar": "«عُشِّي المرضى» بلا ذكر طريقة أشيع نقص في التجارب المقدَّمة."},
+            {"id": "rct-r2", "weight": "critical",
+             "text_en": "Was the allocation sequence concealed from whoever enrolled participants?",
+             "text_ar": "أأُخفي تسلسل التوزيع عمّن سجّل المشاركين؟"},
+            {"id": "rct-r3", "weight": "major",
+             "text_en": "Who was blinded — participants, care providers, outcome assessors — and if blinding was impossible, what was done instead?",
+             "text_ar": "من عُمّي — المشاركون أم مقدّمو الرعاية أم مقيّمو النتائج — وإن تعذّر التعمية فما البديل الذي اتُّخذ؟"}
+          ]
+        },
+        {
+          "title_en": "Outcomes and analysis",
+          "title_ar": "المخرجات والتحليل",
+          "items": [
+            {"id": "rct-o1", "weight": "critical",
+             "text_en": "Does the primary outcome match the one in the trial registration, and if not, is the change explained?",
+             "text_ar": "أتطابق النتيجة الأولية ما ورد في تسجيل التجربة، وإن لم تطابق أفُسِّر التغيير؟",
+             "hint_en": "Check the registry entry yourself; silent outcome switching is a serious finding for the editor.",
+             "hint_ar": "راجع سجلّ التسجيل بنفسك؛ فتبديل النتائج صمتًا أمر جسيم يُبلَّغ به المحرّر."},
+            {"id": "rct-o2", "weight": "critical",
+             "text_en": "Is the sample size calculation given with its assumptions, and was the target reached?",
+             "text_ar": "أأُعطي حساب حجم العيّنة بفرضياته، وهل بُلِغ الهدف؟"},
+            {"id": "rct-o3", "weight": "major",
+             "text_en": "Was analysis by intention to treat, and is any per-protocol analysis clearly secondary?",
+             "text_ar": "أأُجري التحليل بنيّة المعالجة، وهل أيُّ تحليل حسب البروتوكول ثانويٌّ بوضوح؟"},
+            {"id": "rct-o4", "weight": "major",
+             "text_en": "Is there a flow diagram accounting for every participant, including losses to follow-up by arm?",
+             "text_ar": "أثمّة مخطّط تدفّق يحصي كل مشارك، بما في ذلك فاقدو المتابعة في كل ذراع؟"}
+          ]
+        },
+        {
+          "title_en": "Reporting",
+          "title_ar": "العرض والإبلاغ",
+          "items": [
+            {"id": "rct-p1", "weight": "major",
+             "text_en": "Are effect sizes given with confidence intervals for both primary and secondary outcomes?",
+             "text_ar": "أأُعطيت أحجام الأثر بفترات ثقة للنتائج الأولية والثانوية معًا؟"},
+            {"id": "rct-p2", "weight": "critical",
+             "text_en": "Are harms and adverse events reported with the same care as benefits?",
+             "text_ar": "أذُكرت الأضرار والأحداث الضارّة بالعناية نفسها التي ذُكرت بها الفوائد؟"},
+            {"id": "rct-p3", "weight": "major",
+             "text_en": "Is the funder's role stated, and is any sponsor involvement in analysis disclosed?",
+             "text_ar": "أبُيِّن دور الممول، وأفصح عن أي مشاركة للراعي في التحليل؟"}
+          ]
+        }
+      ]
+    },
+    {
+      "key": "survey-research",
+      "name_en": "Questionnaire / survey study",
+      "name_ar": "دراسة استبانة / مسح",
+      "study_type": "survey",
+      "guideline": "CHERRIES for web surveys",
+      "source_url": "https://www.jmir.org/2004/3/e34/",
+      "summary_en": "For studies whose data come from a questionnaire.",
+      "summary_ar": "للدراسات التي تأتي بياناتها من استبانة.",
+      "sections": [
+        {
+          "title_en": "Instrument",
+          "title_ar": "الأداة",
+          "items": [
+            {"id": "sv-i1", "weight": "critical",
+             "text_en": "Is the instrument reproduced or referenced in full, so a reader can see the exact wording of items?",
+             "text_ar": "أأُدرجت الأداة كاملة أو أُحيل إليها، بحيث يرى القارئ صياغة البنود بالضبط؟"},
+            {"id": "sv-i2", "weight": "critical",
+             "text_en": "Is validity evidence given for this instrument in this population, not merely a citation of the original?",
+             "text_ar": "أقُدِّم دليل الصدق للأداة في هذا المجتمع بعينه، لا مجرّد استشهاد بالأصل؟"},
+            {"id": "sv-i3", "weight": "major",
+             "text_en": "Is internal consistency reported per subscale rather than as a single figure for the whole instrument?",
+             "text_ar": "أذُكر الاتّساق الداخلي لكل مقياس فرعي لا كرقم واحد للأداة كلّها؟"},
+            {"id": "sv-i4", "weight": "major",
+             "text_en": "If the instrument was translated, is the translation procedure described and back-translation reported?",
+             "text_ar": "إن تُرجمت الأداة، أوُصفت إجراءات الترجمة وذُكرت الترجمة العكسية؟"}
+          ]
+        },
+        {
+          "title_en": "Sampling and response",
+          "title_ar": "المعاينة والاستجابة",
+          "items": [
+            {"id": "sv-s1", "weight": "critical",
+             "text_en": "Is the sampling frame described, and can the reader tell what population the results generalise to?",
+             "text_ar": "أوُصف إطار المعاينة، وأيتبيّن للقارئ إلى أي مجتمع تُعمَّم النتائج؟"},
+            {"id": "sv-s2", "weight": "critical",
+             "text_en": "Is the response rate reported with its denominator, and is non-response bias discussed?",
+             "text_ar": "أذُكر معدّل الاستجابة بمقامه، ونوقش تحيّز عدم الاستجابة؟",
+             "hint_en": "A convenience sample presented as representative is a common and serious overreach.",
+             "hint_ar": "عرضُ عيّنة ميسّرة على أنها ممثِّلة تجاوزٌ شائع وخطير."},
+            {"id": "sv-s3", "weight": "major",
+             "text_en": "For an online survey, is there any control against repeat or automated submissions?",
+             "text_ar": "في المسح الإلكتروني، أثمّة ضابط يمنع التكرار أو الإرسال الآلي؟"}
+          ]
+        },
+        {
+          "title_en": "Analysis",
+          "title_ar": "التحليل",
+          "items": [
+            {"id": "sv-a1", "weight": "major",
+             "text_en": "Are ordinal Likert items treated in a way the authors justify, rather than silently averaged as if continuous?",
+             "text_ar": "أعُوملت بنود ليكرت الترتيبية معاملة يبرّرها المؤلفون، لا مُتوسِّطة صمتًا كأنها متّصلة؟"},
+            {"id": "sv-a2", "weight": "major",
+             "text_en": "Is the number of statistical comparisons accounted for, or are significant findings being harvested?",
+             "text_ar": "أرُوعي عدد المقارنات الإحصائية، أم تُجتنى النتائج الدالّة اجتناءً؟"},
+            {"id": "sv-a3", "weight": "minor",
+             "text_en": "Are self-report limitations acknowledged where the construct is one people misreport?",
+             "text_ar": "أأُقرّ بقيود التقرير الذاتي حين يكون البناء ممّا يُخطئ الناس في الإبلاغ عنه؟"}
+          ]
+        }
+      ]
+    }
+  ]
+}

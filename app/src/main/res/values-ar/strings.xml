@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">مِحَكّ</string>
+    <string name="app_tagline">منضدة المُحكِّم</string>
+
+    <!-- tabs -->
+    <string name="tab_today">اليوم</string>
+    <string name="tab_reviews">المراجعات</string>
+    <string name="tab_stats">السجل</string>
+    <string name="tab_settings">الإعدادات</string>
+
+    <!-- statuses -->
+    <string name="st_invited">دعوة واردة</string>
+    <string name="st_accepted">مقبولة</string>
+    <string name="st_in_progress">قيد التحكيم</string>
+    <string name="st_submitted">أُرسل التقرير</string>
+    <string name="st_completed">مكتملة</string>
+    <string name="st_declined">معتذَر عنها</string>
+    <string name="st_expired">منتهية</string>
+
+    <!-- recommendations -->
+    <string name="rec_accept">القبول</string>
+    <string name="rec_minor">تعديلات طفيفة</string>
+    <string name="rec_major">تعديلات جوهرية</string>
+    <string name="rec_reject">الرفض</string>
+    <string name="rec_resubmit">الرفض مع إمكان إعادة التقديم</string>
+    <string name="rec_none">لا توصية بعد</string>
+
+    <!-- today -->
+    <string name="today_greeting">منضدتك</string>
+    <string name="today_open_count">%1$d مفتوحة</string>
+    <string name="sec_overdue">متأخّرة</string>
+    <string name="sec_due_soon">تستحقّ خلال أسبوع</string>
+    <string name="sec_invitations">دعوات تنتظر ردّك</string>
+    <string name="sec_later">لاحقًا</string>
+    <string name="today_empty">لا يوجد عمل مفتوح. أضف دعوة بزرّ +.</string>
+    <string name="chip_this_year">%1$d هذا العام</string>
+    <string name="chip_verified">%1$d موثّقة</string>
+    <string name="chip_total">%1$d إجمالًا</string>
+    <string name="days_overdue">متأخّرة %1$d يومًا</string>
+    <string name="days_left">بقي %1$d يومًا</string>
+    <string name="due_today">تستحقّ اليوم</string>
+    <string name="no_deadline">بلا موعد استحقاق</string>
+
+    <!-- reviews list -->
+    <string name="search_hint">ابحث في العنوان أو المجلة أو الرقم أو المحرّر…</string>
+    <string name="filter_all">الكل</string>
+    <string name="filter_open">المفتوحة</string>
+    <string name="filter_done">المُسلَّمة</string>
+    <string name="reviews_empty">لا توجد مراجعات تطابق هذه التصفية.</string>
+    <string name="add_review">مراجعة جديدة</string>
+    <string name="round_n">الجولة %1$d</string>
+    <string name="verified_badge">موثّقة في ORCID</string>
+
+    <!-- quick add -->
+    <string name="quick_add_title">إضافة دعوة</string>
+    <string name="quick_add_hint">الصق رسالة الدعوة ويملأ «مِحَكّ» الحقول عنك. أو اكتب اسم المجلة والموعد فحسب، وما عداهما يمكن أن ينتظر.</string>
+    <string name="quick_add_paste">لصق من الحافظة</string>
+    <string name="quick_add_box">رسالة الدعوة (اختياري)</string>
+    <string name="quick_add_check">راجع هذه</string>
+    <string name="quick_add_more">افتح النموذج الكامل بدلًا من ذلك</string>
+    <string name="quick_add_save">أضِف إلى منضدتي</string>
+    <string name="quick_add_clipboard_empty">لا يوجد ما يُلصق.</string>
+    <plurals name="quick_add_found">
+        <item quantity="zero">لم يُقرأ أي حقل</item>
+        <item quantity="one">قُرئ حقل واحد من الرسالة</item>
+        <item quantity="two">قُرئ حقلان من الرسالة</item>
+        <item quantity="few">قُرئت %1$d حقول من الرسالة</item>
+        <item quantity="many">قُرئ %1$d حقلًا من الرسالة</item>
+        <item quantity="other">قُرئ %1$d حقلًا من الرسالة</item>
+    </plurals>
+
+    <!-- edit -->
+    <string name="edit_show_more">تفاصيل أكثر</string>
+    <string name="edit_show_less">تفاصيل أقل</string>
+    <string name="edit_title_new">مراجعة جديدة</string>
+    <string name="edit_title_edit">تعديل المراجعة</string>
+    <string name="f_journal">المجلة</string>
+    <string name="f_manuscript_id">رقم المخطوطة</string>
+    <string name="f_title">عنوان المخطوطة</string>
+    <string name="f_authors">المؤلّفون (إن لم يكن التحكيم معمّى)</string>
+    <string name="f_editor">المحرّر المسؤول</string>
+    <string name="f_round">الجولة</string>
+    <string name="f_study_type">نوع الدراسة / قائمة الفحص</string>
+    <string name="f_status">الحالة</string>
+    <string name="f_recommendation">التوصية</string>
+    <string name="f_invited_on">تاريخ الدعوة</string>
+    <string name="f_due_on">تاريخ الاستحقاق</string>
+    <string name="f_submitted_on">تاريخ إرسال التقرير</string>
+    <string name="f_hours">الساعات المبذولة</string>
+    <string name="f_tags">وسوم (تفصل بينها فاصلة)</string>
+    <string name="f_notes">ملاحظات خاصة</string>
+    <string name="f_editor_notes">ملاحظات سرّية إلى المحرّر</string>
+    <string name="f_reminder_days">ذكّرني قبل الموعد بـ (يوم)</string>
+    <string name="sec_identity">المخطوطة</string>
+    <string name="sec_dates">التواريخ</string>
+    <string name="sec_outcome">النتيجة</string>
+    <string name="sec_extra">ملاحظات</string>
+    <string name="action_save">حفظ</string>
+    <string name="action_delete">حذف</string>
+    <string name="action_checklist">قائمة الفحص</string>
+    <string name="action_report">التقرير</string>
+    <string name="action_add_calendar">أضف إلى التقويم</string>
+    <string name="action_next_round">ابدأ الجولة التالية</string>
+    <string name="saved">تم الحفظ</string>
+    <string name="deleted">تم الحذف</string>
+    <string name="confirm_delete">حذف هذه المراجعة نهائيًا؟</string>
+    <string name="need_journal">أدخل اسم المجلة أولًا.</string>
+    <string name="pick_date">اختر تاريخًا</string>
+    <string name="clear">مسح</string>
+    <string name="none">بلا</string>
+
+    <!-- checklist -->
+    <string name="checklist_pick">اختر قائمة فحص</string>
+    <string name="checklist_pick_hint">اختر إطار التقييم الموافق لتصميم الدراسة، ويمكنك تغييره لاحقًا.</string>
+    <string name="checklist_items">%1$d بندًا</string>
+    <string name="checklist_progress">أُجيب عن %1$d من %2$d · %3$d ملاحظة</string>
+    <string name="v_ok">سليم</string>
+    <string name="v_concern">ملاحظة</string>
+    <string name="v_fail">غير مستوفى</string>
+    <string name="v_na">لا ينطبق</string>
+    <string name="note_hint">تعليقك (ينتقل إلى التقرير)</string>
+    <string name="w_critical">حرِج</string>
+    <string name="w_major">جوهري</string>
+    <string name="w_minor">طفيف</string>
+    <string name="checklist_source">مستندة إلى %1$s</string>
+    <string name="checklist_none">لم تُختَر قائمة فحص بعد</string>
+
+    <!-- report -->
+    <string name="report_title">تقرير التحكيم</string>
+    <string name="report_pick_template">القالب</string>
+    <string name="report_generate">ولّد من قائمة الفحص</string>
+    <string name="report_copy">نسخ</string>
+    <string name="report_share">مشاركة</string>
+    <string name="report_copied">نُسخ التقرير</string>
+    <string name="report_overwrite">أستبدل المسوّدة الحالية بتوليد جديد؟</string>
+    <string name="report_scope_authors">إلى المؤلّفين</string>
+    <string name="report_scope_editor">إلى المحرّر</string>
+    <string name="report_scope_decline">اعتذار</string>
+    <string name="report_empty_hint">اختر قالبًا ثم اضغط «ولّد من قائمة الفحص».</string>
+
+    <!-- stats -->
+    <string name="stats_title">سجلّ الخدمة</string>
+    <string name="stat_delivered">تقارير مُسلَّمة</string>
+    <string name="stat_verified">موثّقة في ORCID</string>
+    <string name="stat_journals">مجلات خُدِمت</string>
+    <string name="stat_acceptance">قبول الدعوات</string>
+    <string name="stat_median_turnaround">وسيط زمن الإنجاز</string>
+    <string name="stat_on_time">التسليم في موعده</string>
+    <string name="stat_hours">الساعات المسجّلة</string>
+    <string name="stat_open">مفتوحة الآن</string>
+    <string name="n_days">%1$d يومًا</string>
+    <string name="by_year">حسب السنة</string>
+    <string name="by_journal">حسب المجلة</string>
+    <string name="by_publisher">حسب الناشر</string>
+    <string name="by_outcome">التوصيات الصادرة</string>
+    <string name="year_all">كل السنوات</string>
+    <string name="export_pdf">ملف الترقية (PDF)</string>
+    <string name="export_csv">جدول بيانات (CSV)</string>
+    <string name="export_ics">المواعيد (‏.ics)</string>
+    <string name="stats_empty">سجّل أو استورد بضع مراجعات وستمتلئ هذه الصفحة تلقائيًا.</string>
+
+    <!-- dossier pdf -->
+    <string name="dossier_title">سجلّ خدمة التحكيم العلمي</string>
+    <string name="dossier_period">المدة: %1$s</string>
+    <string name="dossier_generated">صدر في %1$s</string>
+    <string name="dossier_by_year">المراجعات حسب السنة</string>
+    <string name="dossier_by_journal">المراجعات حسب المجلة</string>
+    <string name="dossier_by_publisher">المراجعات حسب الناشر</string>
+    <string name="dossier_by_outcome">التوصيات الصادرة</string>
+    <string name="dossier_effort">الجهد</string>
+    <string name="dossier_hours">نحو %1$d ساعة تحكيم مسجّلة.</string>
+    <string name="dossier_note">الأعداد الموسومة بأنها موثّقة تسندها سجلات تحكيم منشورة على ملف المُحكِّم في ORCID. وقد حُجبت هويات المخطوطات التزامًا بسرّية التحكيم.</string>
+    <string name="dossier_footer">مِحَكّ — صفحة %1$d</string>
+    <string name="col_journal">المجلة</string>
+    <string name="col_publisher">الناشر</string>
+    <string name="col_quartile">الربيع</string>
+    <string name="col_count">المراجعات</string>
+
+    <!-- journals -->
+    <string name="journals_title">المجلات</string>
+    <string name="j_name">اسم المجلة</string>
+    <string name="j_publisher">الناشر</string>
+    <string name="j_issn">الترقيم الدولي ISSN</string>
+    <string name="j_quartile">الربيع (Q)</string>
+    <string name="j_if">معامل التأثير</string>
+    <string name="j_indexing">الفهرسة</string>
+    <string name="j_reviews">%1$d مراجعة</string>
+    <string name="journals_empty">تظهر المجلات هنا فور تسجيل أول مراجعة.</string>
+    <string name="journal_edit">بيانات المجلة</string>
+
+    <!-- orcid -->
+    <string name="orcid_title">مزامنة ORCID</string>
+    <string name="orcid_explain">سجلات التحكيم في ORCID مجهّلة بحكم تصميمها: تحمل التاريخ والمجلة دون المخطوطة. واستيرادها يمنحك حصيلة موثّقة من غير أن تكشف ما حكّمته.</string>
+    <string name="orcid_id_hint">معرّف ORCID الخاص بك</string>
+    <string name="orcid_import_file">استيراد ملف السجل</string>
+    <string name="orcid_import_file_help">من موقع orcid.org افتح ملفّك واختر التنزيل، ثم اختر ملف JSON هنا. يعمل بلا اتصال.</string>
+    <string name="orcid_fetch">الجلب عبر الشبكة</string>
+    <string name="orcid_fetch_help">يحتاج عميل واجهة ORCID العامة (مجاني). الصق معرّفه وسرّه أدناه.</string>
+    <string name="orcid_client_id">معرّف العميل</string>
+    <string name="orcid_client_secret">السرّ</string>
+    <string name="orcid_result">أُضيفت %1$d وحُدّثت %2$d من أصل %3$d سجلًا.</string>
+    <string name="orcid_nothing">لا توجد سجلات تحكيم في هذا الملف.</string>
+    <string name="orcid_last_sync">آخر استيراد: %1$s</string>
+    <string name="orcid_never">لم يحدث</string>
+    <string name="orcid_working">جارٍ الاتصال بـ ORCID…</string>
+    <string name="orcid_failed">تعذّر طلب ORCID (%1$s)</string>
+    <string name="orcid_need_creds">أدخل معرّف العميل والسرّ أولًا.</string>
+    <string name="orcid_open_site">افتح orcid.org</string>
+
+    <!-- settings -->
+    <string name="set_profile">الملف الشخصي</string>
+    <string name="set_name">اسمك كما يظهر في السجل</string>
+    <string name="set_email">البريد الإلكتروني</string>
+    <string name="set_affiliation">الجهة</string>
+    <string name="set_appearance">المظهر</string>
+    <string name="set_language">اللغة</string>
+    <string name="lang_system">حسب النظام</string>
+    <string name="lang_ar">العربية</string>
+    <string name="lang_en">English</string>
+    <string name="set_theme">السمة</string>
+    <string name="theme_system">حسب النظام</string>
+    <string name="theme_light">فاتحة</string>
+    <string name="theme_dark">داكنة</string>
+    <string name="set_security">الأمان</string>
+    <string name="set_lock">قفل التطبيق (رمز)</string>
+    <string name="set_lock_on">مفعّل</string>
+    <string name="set_lock_off">معطّل</string>
+    <string name="set_biometric">الفتح بالبصمة</string>
+    <string name="set_change_pin">تغيير الرمز</string>
+    <string name="set_block_shots">منع لقطات الشاشة</string>
+    <string name="set_reminders">التذكيرات</string>
+    <string name="set_remind_hour">الفحص اليومي عند الساعة</string>
+    <string name="set_default_due">المهلة الافتراضية (أيام من الدعوة)</string>
+    <string name="set_data">البيانات</string>
+    <string name="set_backup">تصدير نسخة احتياطية</string>
+    <string name="set_restore">استعادة نسخة احتياطية</string>
+    <string name="set_journals">سجل المجلات</string>
+    <string name="set_orcid">مزامنة ORCID</string>
+    <string name="set_about">حول التطبيق</string>
+    <string name="backup_done">كُتبت النسخة الاحتياطية</string>
+    <string name="restore_done">استُعيدت %1$d مراجعة و%2$d مجلة.</string>
+    <string name="restore_failed">تعذّرت قراءة ملف النسخة الاحتياطية.</string>
+
+    <!-- lock -->
+    <string name="lock_enter_pin">أدخل الرمز</string>
+    <string name="lock_set_pin">اختر رمزًا (٤–٨ أرقام)</string>
+    <string name="lock_confirm_pin">أعد إدخال الرمز</string>
+    <string name="lock_wrong">رمز غير صحيح</string>
+    <string name="lock_mismatch">الرمزان غير متطابقين</string>
+    <string name="lock_too_short">استخدم ٤ أرقام على الأقل</string>
+    <string name="lock_unlock">فتح</string>
+    <string name="lock_biometric_prompt">فتح مِحَكّ</string>
+    <string name="lock_use_pin">استخدم الرمز بدلًا من ذلك</string>
+    <string name="lock_removed">أُلغي قفل التطبيق</string>
+
+    <!-- about -->
+    <string name="about_title">حول التطبيق</string>
+    <string name="about_body">يحفظ «مِحَكّ» سجلّ عمل المُحكِّم على جهازه وحده. فعناوين المخطوطات وأسماء المؤلّفين ومسوّدات التقارير أمانة سرّية أودعتها المجلة عندك، ولا يرفع التطبيق شيئًا منها إلى أي خادم. والاتصال الوحيد الممكن هو استيراد ORCID الاختياري، وسجلاته لا تحمل هوية أي مخطوطة.</string>
+    <string name="about_credits">من إعداد د. محمد توفيق</string>
+    <string name="about_version">الإصدار %1$s</string>
+    <string name="about_content_note">قوائم الفحص أسئلة أصلية موجَّهة إلى المُحكِّم كُتبت خصّيصًا لهذا التطبيق، مستنيرة بأدلة الإبلاغ العامة المذكورة في كل قائمة. وهي عون على الحكم لا بديل عنه.</string>
+
+    <!-- notifications -->
+    <string name="channel_deadlines">مواعيد التحكيم</string>
+    <string name="channel_deadlines_desc">فحص يومي للمراجعات المستحقّة أو المتأخّرة.</string>
+    <string name="notif_overdue_line">%1$s — متأخّرة %2$d يومًا</string>
+    <string name="notif_soon_line">%1$s — تستحقّ خلال %2$d يومًا</string>
+    <plurals name="notif_overdue_title">
+        <item quantity="zero">لا مراجعات متأخّرة</item>
+        <item quantity="one">مراجعة واحدة متأخّرة</item>
+        <item quantity="two">مراجعتان متأخّرتان</item>
+        <item quantity="few">%1$d مراجعات متأخّرة</item>
+        <item quantity="many">%1$d مراجعة متأخّرة</item>
+        <item quantity="other">%1$d مراجعة متأخّرة</item>
+    </plurals>
+    <plurals name="notif_soon_title">
+        <item quantity="zero">لا مواعيد قريبة</item>
+        <item quantity="one">مراجعة واحدة تستحقّ قريبًا</item>
+        <item quantity="two">مراجعتان تستحقّان قريبًا</item>
+        <item quantity="few">%1$d مراجعات تستحقّ قريبًا</item>
+        <item quantity="many">%1$d مراجعة تستحقّ قريبًا</item>
+        <item quantity="other">%1$d مراجعة تستحقّ قريبًا</item>
+    </plurals>
+
+    <string name="cancel">إلغاء</string>
+    <string name="ok">حسنًا</string>
+</resources>

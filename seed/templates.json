@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "note": "Report skeletons. Placeholders in double braces are filled from the review record; the checklist supplies the numbered points.",
+  "templates": [
+    {
+      "key": "en-major-revision",
+      "name_en": "Major revision — full report",
+      "name_ar": "تعديلات جوهرية — تقرير كامل",
+      "lang": "en",
+      "scope": "to_authors",
+      "recommendation": "major_revision",
+      "description_en": "The workhorse: summary, strengths, numbered major and minor points.",
+      "description_ar": "القالب الأساس: تلخيص ونقاط قوة وملاحظات جوهرية وطفيفة مرقّمة.",
+      "body": "Manuscript: {{manuscript_title}}\nManuscript ID: {{manuscript_id}}\nJournal: {{journal}}\nReview round: {{round}}\n\nSUMMARY OF THE SUBMISSION\n\n{{summary}}\n\nGENERAL ASSESSMENT\n\nThe topic is within the scope of {{journal}} and the question the authors set out to answer is a reasonable one. In its present form, however, the manuscript does not yet establish the claim it makes, and I recommend major revision. The points below are ordered by how much they bear on that claim; the major ones would each, on their own, need to be resolved before the conclusions can stand.\n\nSTRENGTHS\n\n{{strengths}}\n\nMAJOR POINTS\n\n{{major_points}}\n\nMINOR POINTS\n\n{{minor_points}}\n\nREFERENCES\n\n{{references_note}}\n\nI would be glad to look at a revised version. I hope the authors find these comments useful; they are offered in the spirit of strengthening a piece of work I think is worth strengthening.\n\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "en-minor-revision",
+      "name_en": "Minor revision",
+      "name_ar": "تعديلات طفيفة",
+      "lang": "en",
+      "scope": "to_authors",
+      "recommendation": "minor_revision",
+      "description_en": "The science holds; presentation and detail need work.",
+      "description_ar": "العلم سليم، وتحتاج الصياغة والتفاصيل إلى ضبط.",
+      "body": "Manuscript: {{manuscript_title}} ({{manuscript_id}})\n\nSUMMARY\n\n{{summary}}\n\nThis is a sound piece of work. The method is appropriate to the question, the evidence supports the conclusions, and the manuscript is close to publishable. My remaining comments are matters of completeness and clarity rather than substance.\n\nPOINTS TO ADDRESS\n\n{{major_points}}\n\nSMALLER MATTERS\n\n{{minor_points}}\n\nI do not need to see the manuscript again provided these are addressed.\n\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "en-accept",
+      "name_en": "Accept as is",
+      "name_ar": "قبول كما هو",
+      "lang": "en",
+      "scope": "to_authors",
+      "recommendation": "accept",
+      "description_en": "Short, warm, and specific about what makes it good.",
+      "description_ar": "قصير وودود ومحدَّد فيما يجعله جيّدًا.",
+      "body": "Manuscript: {{manuscript_title}} ({{manuscript_id}})\n\nI have read this manuscript with interest and recommend acceptance without further changes.\n\n{{summary}}\n\nWhat the paper does well:\n\n{{strengths}}\n\nThe claims are proportionate to the evidence, the method is reported in enough detail to be repeated, and the presentation is clear. I have no substantive comments.\n\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "en-reject",
+      "name_en": "Reject — with reasons",
+      "name_ar": "رفض مع تعليل",
+      "lang": "en",
+      "scope": "to_authors",
+      "recommendation": "reject",
+      "description_en": "Respectful, concrete, and useful to the authors even in rejection.",
+      "description_ar": "محترم ومحدَّد ونافع للمؤلفين حتى مع الرفض.",
+      "body": "Manuscript: {{manuscript_title}} ({{manuscript_id}})\n\nSUMMARY OF THE SUBMISSION\n\n{{summary}}\n\nRECOMMENDATION\n\nI am sorry to say that I cannot recommend this manuscript for publication in {{journal}}. I want to be clear about why, so that the authors can judge for themselves whether the work can be taken forward elsewhere.\n\nThe difficulty is not a matter of presentation, and I do not believe it can be resolved by revision of the current dataset and analysis. The specific reasons are:\n\n{{major_points}}\n\nOTHER OBSERVATIONS\n\n{{minor_points}}\n\nWHAT I WOULD SUGGEST\n\n[state, in two or three sentences, what a version of this work could look like that would succeed — a different comparison, a larger or independent sample, a narrower claim]\n\nI recognise the effort behind this submission and I hope these comments are of some use in deciding what to do next.\n\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "en-reject-resubmit",
+      "name_en": "Reject, encourage resubmission",
+      "name_ar": "رفض مع تشجيع إعادة التقديم",
+      "lang": "en",
+      "scope": "to_authors",
+      "recommendation": "resubmit",
+      "description_en": "The idea is good; the evidence needs rebuilding.",
+      "description_ar": "الفكرة جيّدة، والأدلة تحتاج إعادة بناء.",
+      "body": "Manuscript: {{manuscript_title}} ({{manuscript_id}})\n\n{{summary}}\n\nThere is a genuinely interesting contribution here, and I would like to see it published. As submitted, though, the evidence does not yet carry the claim, and the work needed goes beyond what a revision cycle normally covers. I therefore recommend rejection in the current form, with a clear encouragement to resubmit once the following are in place.\n\nWHAT WOULD NEED TO CHANGE\n\n{{major_points}}\n\nSMALLER MATTERS FOR THE NEXT VERSION\n\n{{minor_points}}\n\nIf the authors resubmit, I would be willing to review the new version.\n\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "en-second-round",
+      "name_en": "Round 2 — response to a revision",
+      "name_ar": "الجولة الثانية — ردّ على نسخة منقّحة",
+      "lang": "en",
+      "scope": "to_authors",
+      "recommendation": "minor_revision",
+      "description_en": "Point-by-point acknowledgement of the rebuttal.",
+      "description_ar": "إقرار نقطة بنقطة على ردّ المؤلفين.",
+      "body": "Manuscript: {{manuscript_title}} ({{manuscript_id}})\nReview round: {{round}}\n\nI thank the authors for a careful and responsive revision, and for the detailed rebuttal letter.\n\nPOINTS I CONSIDER RESOLVED\n\n[list the numbers from your first report that the revision has settled, with one line each on what convinced you]\n\nPOINTS STILL OUTSTANDING\n\n{{major_points}}\n\nNEW POINTS ARISING FROM THE REVISION\n\n{{minor_points}}\n\n[If nothing substantive remains: \"With these small matters attended to, I am happy to see the manuscript proceed.\"]\n\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "en-ml-paper",
+      "name_en": "Machine-learning manuscript",
+      "name_ar": "مخطوطة تعلُّم آلي",
+      "lang": "en",
+      "scope": "to_authors",
+      "recommendation": "major_revision",
+      "description_en": "Structured around leakage, baselines, ablations and reproducibility.",
+      "description_ar": "مبني على التسريب وخطوط الأساس والاستئصال وقابلية إعادة الإنتاج.",
+      "body": "Manuscript: {{manuscript_title}} ({{manuscript_id}})\n\nSUMMARY\n\n{{summary}}\n\nThe reported results are strong. Before they can be accepted as evidence of the claimed advance, the manuscript needs to close off the ordinary alternative explanations for a high score. I have organised my comments accordingly.\n\n1. DATA AND POSSIBLE LEAKAGE\n\n{{major_points}}\n\n2. BASELINES AND FAIRNESS OF COMPARISON\n\n[Was each baseline given the same tuning budget as the proposed model? Are the baselines the ones a specialist would name, at their published settings or better?]\n\n3. STATISTICAL SUPPORT\n\n[Are results averaged over several seeds or folds, with dispersion? Is the gap between the proposed model and the best baseline larger than the run-to-run variation?]\n\n4. ABLATION\n\n[Does an ablation isolate the component the paper credits for the gain?]\n\n5. REPRODUCIBILITY\n\n[Architecture, optimiser, learning rate, batch size, epochs, stopping rule, hardware, code availability.]\n\nMINOR POINTS\n\n{{minor_points}}\n\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "en-survey-paper",
+      "name_en": "Review / survey manuscript",
+      "name_ar": "مخطوطة مراجعة أو مسح أدبيات",
+      "lang": "en",
+      "scope": "to_authors",
+      "recommendation": "major_revision",
+      "description_en": "Coverage, taxonomy, currency, and value beyond existing surveys.",
+      "description_ar": "الشمول والتصنيف والحداثة والقيمة المضافة على المسوح القائمة.",
+      "body": "Manuscript: {{manuscript_title}} ({{manuscript_id}})\n\n{{summary}}\n\nA survey earns its place by doing something the primary literature cannot do for a reader: organising it. My comments are about whether this manuscript does that.\n\nWHAT THIS SURVEY ADDS\n\n[Name the existing surveys in this area. What does this one offer that they do not — newer coverage, a different organising principle, a synthesis they lack? If the answer is only \"more recent\", say so.]\n\nSEARCH AND COVERAGE\n\n{{major_points}}\n\nTAXONOMY\n\n[Is the classification exhaustive and mutually exclusive? Does each surveyed work sit in exactly one place, and would a reader be able to place a new paper using it?]\n\nCRITICAL STANCE\n\n[Does the survey evaluate the work it covers, or only describe it? A table of \"advantages and disadvantages\" copied from abstracts is description, not synthesis.]\n\nMINOR POINTS\n\n{{minor_points}}\n\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "en-editor-confidential",
+      "name_en": "Confidential note to the editor",
+      "name_ar": "ملاحظات سرّية إلى المحرّر",
+      "lang": "en",
+      "scope": "to_editor",
+      "recommendation": "none",
+      "description_en": "Context for the editor that does not belong in the authors' report.",
+      "description_ar": "سياق للمحرّر لا يليق بتقرير المؤلفين.",
+      "body": "Dear {{editor}},\n\nRe: {{manuscript_title}} ({{manuscript_id}})\n\nMy recommendation is {{recommendation}}.\n\nConfidence in this assessment: [high / moderate / limited — and for which parts]\n\nMy expertise covers: [the parts of the manuscript you are qualified to judge]\nOutside my expertise: [the parts you are not — say so plainly, and suggest what kind of second reviewer would cover them]\n\nAdditional context for your decision:\n\n[Anything relevant that should not go to the authors: how far the work is from the journal's usual standard, whether the flaws look remediable within one revision cycle, whether the authors seem to have the data to fix them.]\n\nI am willing / not willing to review a revised version.\n\nWith regards,\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "en-editor-ethics-concern",
+      "name_en": "Confidential — possible integrity concern",
+      "name_ar": "سرّي — شبهة تتعلّق بالنزاهة",
+      "lang": "en",
+      "scope": "to_editor",
+      "recommendation": "none",
+      "description_en": "Raises a concern for the editor to verify. Never an accusation.",
+      "description_ar": "يرفع شبهة ليتحقّق منها المحرّر، لا اتهامًا البتّة.",
+      "body": "Dear {{editor}},\n\nRe: {{manuscript_title}} ({{manuscript_id}})\n\nI am writing separately from my review report because something in this submission gave me pause, and I think it is for the editorial office rather than for me to establish whether there is anything in it.\n\nWhat I observed:\n\n[Describe only what you can point at — a passage whose register differs sharply from the rest, a figure panel that appears to repeat another, a reported result that does not follow from the stated method, a reference list that does not match the citations. Give page and line numbers.]\n\nI want to be clear that I am not making an allegation. There may well be an innocent explanation, and I have no way of checking from where I sit. I am flagging it so that the office can run whatever checks it normally would.\n\nI would be grateful if this note were kept separate from my comments to the authors.\n\nWith regards,\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "en-decline-conflict",
+      "name_en": "Decline — conflict of interest",
+      "name_ar": "اعتذار — تضارب مصالح",
+      "lang": "en",
+      "scope": "decline",
+      "recommendation": "none",
+      "description_en": "Short, states the conflict, offers alternates.",
+      "description_ar": "قصير، يذكر التضارب، ويقترح بدائل.",
+      "body": "Dear {{editor}},\n\nThank you for the invitation to review \"{{manuscript_title}}\" ({{manuscript_id}}) for {{journal}}.\n\nI must decline, as I have a conflict of interest: [state it plainly — a recent co-authorship, a shared institution, a current collaboration or funding relationship, or a competing manuscript of my own on the same question].\n\nI would not be able to give the manuscript an assessment the authors could rely on as independent.\n\nIf it helps, the following colleagues work in this area and I am not aware of any similar conflict on their part: [names].\n\nWith regards,\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "en-decline-workload",
+      "name_en": "Decline — workload",
+      "name_ar": "اعتذار — ضغط العمل",
+      "lang": "en",
+      "scope": "decline",
+      "recommendation": "none",
+      "description_en": "Declines the deadline, not the journal.",
+      "description_ar": "اعتذار عن الموعد لا عن المجلة.",
+      "body": "Dear {{editor}},\n\nThank you for thinking of me for \"{{manuscript_title}}\" ({{manuscript_id}}).\n\nI am sorry that I cannot take it on within your timeframe — I have [n] reviews in hand at present and I would rather decline than return something rushed or late.\n\nIf the manuscript is still with you after [date], or if a similar submission comes up then, I would be glad to be asked again.\n\nSuggested alternative reviewers: [names].\n\nWith regards,\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "en-decline-expertise",
+      "name_en": "Decline — outside my expertise",
+      "name_ar": "اعتذار — خارج تخصّصي",
+      "lang": "en",
+      "scope": "decline",
+      "recommendation": "none",
+      "description_en": "Says precisely which part you could and could not judge.",
+      "description_ar": "يبيّن بدقّة ما تستطيع الحكم فيه وما لا تستطيع.",
+      "body": "Dear {{editor}},\n\nThank you for the invitation to review \"{{manuscript_title}}\" ({{manuscript_id}}).\n\nHaving read the abstract, I do not think I am the right reviewer for it. I could give you a competent view of [the part you can judge], but the substance of the paper rests on [the part you cannot], and there I would be guessing.\n\nRather than return a review that looks authoritative on a question I am not qualified to settle, I would prefer to decline.\n\nColleagues who would be better placed: [names].\n\nWith regards,\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "ar-major-revision",
+      "name_en": "Major revision (Arabic)",
+      "name_ar": "تعديلات جوهرية — تقرير كامل",
+      "lang": "ar",
+      "scope": "to_authors",
+      "recommendation": "major_revision",
+      "description_en": "Full Arabic report.",
+      "description_ar": "تقرير عربي كامل بالبنية المعتادة.",
+      "body": "المخطوطة: {{manuscript_title}}\nرقم المخطوطة: {{manuscript_id}}\nالمجلة: {{journal}}\nجولة التحكيم: {{round}}\n\nأولًا: تلخيص البحث\n\n{{summary}}\n\nثانيًا: التقييم العام\n\nالموضوع داخل نطاق {{journal}}، والسؤال الذي انطلق منه الباحثون وجيه. غير أنّ المخطوطة في صورتها الحالية لا تُقيم الدعوى التي تنهض بها، ولذلك أوصي بإجراء تعديلات جوهرية. وقد رتّبت الملاحظات أدناه بحسب أثرها في تلك الدعوى، والملاحظات الجوهرية منها يحتاج كلٌّ منها منفردًا إلى معالجة قبل أن تستقيم الاستنتاجات.\n\nثالثًا: مواطن القوة\n\n{{strengths}}\n\nرابعًا: الملاحظات الجوهرية\n\n{{major_points}}\n\nخامسًا: الملاحظات الطفيفة\n\n{{minor_points}}\n\nسادسًا: المراجع\n\n{{references_note}}\n\nويسرّني الاطّلاع على النسخة المنقّحة. وأرجو أن يجد الباحثون في هذه الملاحظات عونًا؛ فهي مبذولة لتقوية عمل أراه جديرًا بالتقوية.\n\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "ar-minor-revision",
+      "name_en": "Minor revision (Arabic)",
+      "name_ar": "تعديلات طفيفة",
+      "lang": "ar",
+      "scope": "to_authors",
+      "recommendation": "minor_revision",
+      "description_en": "Short Arabic report.",
+      "description_ar": "تقرير عربي موجز.",
+      "body": "المخطوطة: {{manuscript_title}} ({{manuscript_id}})\n\nتلخيص البحث\n\n{{summary}}\n\nهذا عمل رصين: المنهج ملائم للسؤال، والأدلة تسند الاستنتاجات، والمخطوطة قريبة من الصلاحية للنشر. وملاحظاتي الباقية تتعلّق بالاكتمال والوضوح لا بالجوهر.\n\nملاحظات تحتاج معالجة\n\n{{major_points}}\n\nمسائل أصغر\n\n{{minor_points}}\n\nولا حاجة بي إلى الاطّلاع على المخطوطة مرّة أخرى متى عولجت هذه النقاط.\n\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "ar-reject",
+      "name_en": "Reject (Arabic)",
+      "name_ar": "رفض مع تعليل بنّاء",
+      "lang": "ar",
+      "scope": "to_authors",
+      "recommendation": "reject",
+      "description_en": "Arabic rejection, constructive.",
+      "description_ar": "رفض عربي بنّاء ومحترم.",
+      "body": "المخطوطة: {{manuscript_title}} ({{manuscript_id}})\n\nتلخيص البحث\n\n{{summary}}\n\nالتوصية\n\nيؤسفني أن أُبدي عدم توصيتي بنشر هذه المخطوطة في {{journal}}. وأودّ أن أوضّح الأسباب ليتمكّن الباحثون من الحكم بأنفسهم على إمكان المضيّ بالعمل في موضع آخر.\n\nوالإشكال ليس في العرض، ولا أحسبه ممّا يُعالَج بتنقيح البيانات والتحليل الحاليّين. وأسبابه على وجه التحديد:\n\n{{major_points}}\n\nملحوظات أخرى\n\n{{minor_points}}\n\nما أقترحه\n\n[اذكر في سطرين أو ثلاثة كيف يمكن أن تبدو صورة ناجحة من هذا العمل: مقارنة مختلفة، أو عيّنة أكبر أو مستقلّة، أو دعوى أضيق]\n\nوأقدّر الجهد المبذول في هذا البحث، وأرجو أن تُفيد هذه الملاحظات في تقرير الخطوة التالية.\n\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "ar-editor-confidential",
+      "name_en": "Confidential to editor (Arabic)",
+      "name_ar": "ملاحظات سرّية إلى رئيس التحرير",
+      "lang": "ar",
+      "scope": "to_editor",
+      "recommendation": "none",
+      "description_en": "Arabic confidential note.",
+      "description_ar": "مذكّرة عربية سرّية للمحرّر.",
+      "body": "سعادة {{editor}} المحترم،\n\nبشأن: {{manuscript_title}} ({{manuscript_id}})\n\nتوصيتي: {{recommendation}}\n\nدرجة ثقتي في هذا التقييم: [عالية / متوسطة / محدودة — وفي أي أجزاء]\n\nيشمل تخصّصي: [الأجزاء التي أنت مؤهّل للحكم فيها]\nوخارج تخصّصي: [الأجزاء التي لست مؤهّلًا لها — صرّح بذلك، واقترح نوع المحكّم الثاني الذي يغطّيها]\n\nسياق إضافي لقراركم:\n\n[كل ما يتّصل بالقرار ولا يليق إرساله إلى المؤلفين: مدى بُعد العمل عن مستوى المجلة المعتاد، وهل تبدو العيوب قابلة للإصلاح في جولة تنقيح واحدة، وهل لدى الباحثين البيانات اللازمة لإصلاحها.]\n\nوأنا مستعدّ / غير مستعدّ لتحكيم النسخة المنقّحة.\n\nوتفضّلوا بقبول فائق الاحترام،\n{{reviewer_name}}\n{{date}}"
+    },
+    {
+      "key": "ar-decline-conflict",
+      "name_en": "Decline for conflict (Arabic)",
+      "name_ar": "اعتذار عن التحكيم لتضارب المصالح",
+      "lang": "ar",
+      "scope": "decline",
+      "recommendation": "none",
+      "description_en": "Arabic decline note.",
+      "description_ar": "اعتذار عربي موجز.",
+      "body": "سعادة {{editor}} المحترم،\n\nأشكر لكم دعوتي لتحكيم البحث الموسوم «{{manuscript_title}}» ({{manuscript_id}}) في {{journal}}.\n\nويؤسفني الاعتذار لوجود تضارب في المصالح: [اذكره صراحةً — تأليف مشترك حديث، أو انتماء إلى الجهة نفسها، أو تعاون أو تمويل قائم، أو مخطوطة منافسة لي في المسألة ذاتها].\n\nولن يكون في وسعي أن أُصدر تقييمًا يَعُدّه الباحثون مستقلًّا.\n\nوإن كان في ذلك عون، فهؤلاء الزملاء يعملون في هذا المجال ولا أعلم لهم تضاربًا مماثلًا: [الأسماء].\n\nوتفضّلوا بقبول فائق الاحترام،\n{{reviewer_name}}\n{{date}}"
+    }
+  ]
+}

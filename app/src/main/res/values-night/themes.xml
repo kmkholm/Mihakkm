@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Mihakk" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#D8AB45</item>
+        <item name="colorOnPrimary">#241B04</item>
+        <item name="colorPrimaryContainer">#4A3A12</item>
+        <item name="colorOnPrimaryContainer">#F0DFB4</item>
+        <item name="colorSecondary">#D8AB45</item>
+        <item name="colorOnSecondary">#241B04</item>
+        <item name="colorSecondaryContainer">#4A3A12</item>
+        <item name="colorOnSecondaryContainer">#F0DFB4</item>
+        <item name="colorError">#E57368</item>
+        <item name="android:colorBackground">@color/dark_bg</item>
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="colorSurfaceVariant">@color/dark_surface_alt</item>
+        <item name="colorOnSurface">@color/dark_ink</item>
+        <item name="colorOnSurfaceVariant">@color/dark_muted</item>
+        <item name="colorOutline">@color/dark_outline</item>
+        <item name="android:statusBarColor">@color/dark_bg</item>
+        <item name="android:navigationBarColor">@color/dark_bg</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+    </style>
+</resources>

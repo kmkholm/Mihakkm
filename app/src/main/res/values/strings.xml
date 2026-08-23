@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mihakk</string>
+    <string name="app_tagline">The reviewer\'s desk</string>
+
+    <!-- tabs -->
+    <string name="tab_today">Today</string>
+    <string name="tab_reviews">Reviews</string>
+    <string name="tab_stats">Record</string>
+    <string name="tab_settings">Settings</string>
+
+    <!-- statuses -->
+    <string name="st_invited">Invited</string>
+    <string name="st_accepted">Accepted</string>
+    <string name="st_in_progress">In progress</string>
+    <string name="st_submitted">Report sent</string>
+    <string name="st_completed">Completed</string>
+    <string name="st_declined">Declined</string>
+    <string name="st_expired">Expired</string>
+
+    <!-- recommendations -->
+    <string name="rec_accept">Accept</string>
+    <string name="rec_minor">Minor revision</string>
+    <string name="rec_major">Major revision</string>
+    <string name="rec_reject">Reject</string>
+    <string name="rec_resubmit">Reject &amp; resubmit</string>
+    <string name="rec_none">No recommendation yet</string>
+
+    <!-- today -->
+    <string name="today_greeting">Your desk</string>
+    <string name="today_open_count">%1$d open</string>
+    <string name="sec_overdue">Overdue</string>
+    <string name="sec_due_soon">Due within a week</string>
+    <string name="sec_invitations">Invitations awaiting your answer</string>
+    <string name="sec_later">Later</string>
+    <string name="today_empty">Nothing open. Add an invitation with the + button.</string>
+    <string name="chip_this_year">%1$d this year</string>
+    <string name="chip_verified">%1$d verified</string>
+    <string name="chip_total">%1$d total</string>
+    <string name="days_overdue">%1$d days overdue</string>
+    <string name="days_left">%1$d days left</string>
+    <string name="due_today">Due today</string>
+    <string name="no_deadline">No deadline set</string>
+
+    <!-- reviews list -->
+    <string name="search_hint">Search title, journal, ID, editor…</string>
+    <string name="filter_all">All</string>
+    <string name="filter_open">Open</string>
+    <string name="filter_done">Delivered</string>
+    <string name="reviews_empty">No reviews match this filter.</string>
+    <string name="add_review">New review</string>
+    <string name="round_n">Round %1$d</string>
+    <string name="verified_badge">ORCID verified</string>
+
+    <!-- quick add -->
+    <string name="quick_add_title">Add an invitation</string>
+    <string name="quick_add_hint">Paste the invitation email and Mihakk fills the fields in for you. Or just type the journal and a deadline — everything else can wait.</string>
+    <string name="quick_add_paste">Paste from clipboard</string>
+    <string name="quick_add_box">Invitation email (optional)</string>
+    <string name="quick_add_check">Check these</string>
+    <string name="quick_add_more">Open the full form instead</string>
+    <string name="quick_add_save">Add to my desk</string>
+    <string name="quick_add_clipboard_empty">Nothing to paste.</string>
+    <plurals name="quick_add_found">
+        <item quantity="one">Read 1 field from the email</item>
+        <item quantity="other">Read %1$d fields from the email</item>
+    </plurals>
+
+    <!-- edit -->
+    <string name="edit_show_more">More details</string>
+    <string name="edit_show_less">Fewer details</string>
+    <string name="edit_title_new">New review</string>
+    <string name="edit_title_edit">Edit review</string>
+    <string name="f_journal">Journal</string>
+    <string name="f_manuscript_id">Manuscript ID</string>
+    <string name="f_title">Manuscript title</string>
+    <string name="f_authors">Authors (if not blinded)</string>
+    <string name="f_editor">Handling editor</string>
+    <string name="f_round">Round</string>
+    <string name="f_study_type">Study type / checklist</string>
+    <string name="f_status">Status</string>
+    <string name="f_recommendation">Recommendation</string>
+    <string name="f_invited_on">Invited on</string>
+    <string name="f_due_on">Due on</string>
+    <string name="f_submitted_on">Report sent on</string>
+    <string name="f_hours">Hours spent</string>
+    <string name="f_tags">Tags (comma separated)</string>
+    <string name="f_notes">Private notes</string>
+    <string name="f_editor_notes">Confidential comments to the editor</string>
+    <string name="f_reminder_days">Remind me this many days before</string>
+    <string name="sec_identity">Manuscript</string>
+    <string name="sec_dates">Dates</string>
+    <string name="sec_outcome">Outcome</string>
+    <string name="sec_extra">Notes</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_checklist">Checklist</string>
+    <string name="action_report">Report</string>
+    <string name="action_add_calendar">Add to calendar</string>
+    <string name="action_next_round">Start next round</string>
+    <string name="saved">Saved</string>
+    <string name="deleted">Deleted</string>
+    <string name="confirm_delete">Delete this review permanently?</string>
+    <string name="need_journal">Enter a journal name first.</string>
+    <string name="pick_date">Pick a date</string>
+    <string name="clear">Clear</string>
+    <string name="none">None</string>
+
+    <!-- checklist -->
+    <string name="checklist_pick">Choose a checklist</string>
+    <string name="checklist_pick_hint">Pick the appraisal frame that matches the study design. You can change it later.</string>
+    <string name="checklist_items">%1$d items</string>
+    <string name="checklist_progress">%1$d of %2$d answered · %3$d concerns</string>
+    <string name="v_ok">Fine</string>
+    <string name="v_concern">Concern</string>
+    <string name="v_fail">Not met</string>
+    <string name="v_na">N/A</string>
+    <string name="note_hint">Your comment (goes into the report)</string>
+    <string name="w_critical">Critical</string>
+    <string name="w_major">Major</string>
+    <string name="w_minor">Minor</string>
+    <string name="checklist_source">Based on %1$s</string>
+    <string name="checklist_none">No checklist chosen yet</string>
+
+    <!-- report -->
+    <string name="report_title">Review report</string>
+    <string name="report_pick_template">Template</string>
+    <string name="report_generate">Build from checklist</string>
+    <string name="report_copy">Copy</string>
+    <string name="report_share">Share</string>
+    <string name="report_copied">Report copied</string>
+    <string name="report_overwrite">Replace the current draft with a fresh build?</string>
+    <string name="report_scope_authors">To the authors</string>
+    <string name="report_scope_editor">To the editor</string>
+    <string name="report_scope_decline">Declining</string>
+    <string name="report_empty_hint">Pick a template, then Build from checklist.</string>
+
+    <!-- stats -->
+    <string name="stats_title">Service record</string>
+    <string name="stat_delivered">Reports delivered</string>
+    <string name="stat_verified">ORCID verified</string>
+    <string name="stat_journals">Journals served</string>
+    <string name="stat_acceptance">Invitations accepted</string>
+    <string name="stat_median_turnaround">Median turnaround</string>
+    <string name="stat_on_time">Delivered on time</string>
+    <string name="stat_hours">Hours logged</string>
+    <string name="stat_open">Open now</string>
+    <string name="n_days">%1$d days</string>
+    <string name="by_year">Per year</string>
+    <string name="by_journal">Per journal</string>
+    <string name="by_publisher">Per publisher</string>
+    <string name="by_outcome">Recommendations given</string>
+    <string name="year_all">All years</string>
+    <string name="export_pdf">Promotion-file PDF</string>
+    <string name="export_csv">Spreadsheet (CSV)</string>
+    <string name="export_ics">Deadlines (.ics)</string>
+    <string name="stats_empty">Log or import a few reviews and this page fills itself in.</string>
+
+    <!-- dossier pdf -->
+    <string name="dossier_title">Peer Review Service Record</string>
+    <string name="dossier_period">Period: %1$s</string>
+    <string name="dossier_generated">Generated %1$s</string>
+    <string name="dossier_by_year">Reviews per year</string>
+    <string name="dossier_by_journal">Reviews per journal</string>
+    <string name="dossier_by_publisher">Reviews per publisher</string>
+    <string name="dossier_by_outcome">Recommendations given</string>
+    <string name="dossier_effort">Effort</string>
+    <string name="dossier_hours">Approximately %1$d hours of reviewing recorded.</string>
+    <string name="dossier_note">Counts marked as verified are backed by peer-review records on the reviewer\'s ORCID profile. Manuscript identities are withheld, as required by reviewer confidentiality.</string>
+    <string name="dossier_footer">Mihakk — page %1$d</string>
+    <string name="col_journal">Journal</string>
+    <string name="col_publisher">Publisher</string>
+    <string name="col_quartile">Quartile</string>
+    <string name="col_count">Reviews</string>
+
+    <!-- journals -->
+    <string name="journals_title">Journals</string>
+    <string name="j_name">Journal name</string>
+    <string name="j_publisher">Publisher</string>
+    <string name="j_issn">ISSN</string>
+    <string name="j_quartile">Quartile</string>
+    <string name="j_if">Impact factor</string>
+    <string name="j_indexing">Indexing</string>
+    <string name="j_reviews">%1$d reviews</string>
+    <string name="journals_empty">Journals appear here as soon as you log a review.</string>
+    <string name="journal_edit">Journal details</string>
+
+    <!-- orcid -->
+    <string name="orcid_title">ORCID sync</string>
+    <string name="orcid_explain">ORCID peer-review records are anonymous by design: they carry the date and the journal, never the manuscript. Importing them gives you a verified tally without ever exposing what you reviewed.</string>
+    <string name="orcid_id_hint">Your ORCID iD</string>
+    <string name="orcid_import_file">Import a record file</string>
+    <string name="orcid_import_file_help">On orcid.org open your record, choose the download option, and pick the JSON file here. Works with no network.</string>
+    <string name="orcid_fetch">Fetch over the network</string>
+    <string name="orcid_fetch_help">Needs a free ORCID public-API client. Paste its ID and secret below.</string>
+    <string name="orcid_client_id">Public API client ID</string>
+    <string name="orcid_client_secret">Client secret</string>
+    <string name="orcid_result">Added %1$d, updated %2$d, from %3$d records found.</string>
+    <string name="orcid_nothing">No peer-review records found in that file.</string>
+    <string name="orcid_last_sync">Last import: %1$s</string>
+    <string name="orcid_never">never</string>
+    <string name="orcid_working">Contacting ORCID…</string>
+    <string name="orcid_failed">ORCID request failed (%1$s)</string>
+    <string name="orcid_need_creds">Enter the client ID and secret first.</string>
+    <string name="orcid_open_site">Open orcid.org</string>
+
+    <!-- settings -->
+    <string name="set_profile">Profile</string>
+    <string name="set_name">Your name (as it should appear on the record)</string>
+    <string name="set_email">Email</string>
+    <string name="set_affiliation">Affiliation</string>
+    <string name="set_appearance">Appearance</string>
+    <string name="set_language">Language</string>
+    <string name="lang_system">Follow system</string>
+    <string name="lang_ar">العربية</string>
+    <string name="lang_en">English</string>
+    <string name="set_theme">Theme</string>
+    <string name="theme_system">Follow system</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="set_security">Security</string>
+    <string name="set_lock">App lock (PIN)</string>
+    <string name="set_lock_on">On</string>
+    <string name="set_lock_off">Off</string>
+    <string name="set_biometric">Unlock with biometrics</string>
+    <string name="set_change_pin">Change PIN</string>
+    <string name="set_block_shots">Block screenshots</string>
+    <string name="set_reminders">Reminders</string>
+    <string name="set_remind_hour">Daily check at</string>
+    <string name="set_default_due">Default deadline (days from invitation)</string>
+    <string name="set_data">Data</string>
+    <string name="set_backup">Export a backup</string>
+    <string name="set_restore">Restore a backup</string>
+    <string name="set_journals">Journal registry</string>
+    <string name="set_orcid">ORCID sync</string>
+    <string name="set_about">About</string>
+    <string name="backup_done">Backup written</string>
+    <string name="restore_done">Restored %1$d reviews and %2$d journals.</string>
+    <string name="restore_failed">Could not read that backup file.</string>
+
+    <!-- lock -->
+    <string name="lock_enter_pin">Enter your PIN</string>
+    <string name="lock_set_pin">Choose a PIN (4–8 digits)</string>
+    <string name="lock_confirm_pin">Repeat the PIN</string>
+    <string name="lock_wrong">Wrong PIN</string>
+    <string name="lock_mismatch">The two PINs do not match</string>
+    <string name="lock_too_short">Use at least 4 digits</string>
+    <string name="lock_unlock">Unlock</string>
+    <string name="lock_biometric_prompt">Unlock Mihakk</string>
+    <string name="lock_use_pin">Use PIN instead</string>
+    <string name="lock_removed">App lock turned off</string>
+
+    <!-- about -->
+    <string name="about_title">About</string>
+    <string name="about_body">Mihakk keeps a reviewer\'s working record on the reviewer\'s own device. Manuscript titles, author names and draft reports are confidential material entrusted to you by a journal — none of it is uploaded anywhere. The only network call the app can make is the optional ORCID import, and ORCID records carry no manuscript identity.</string>
+    <string name="about_credits">Built by Dr. Mohammed Tawfik</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="about_content_note">Checklists are original reviewer-facing questions written for this app, informed by the public reporting guidelines named on each one. They are an aid to judgement, not a substitute for it.</string>
+
+    <!-- notifications -->
+    <string name="channel_deadlines">Review deadlines</string>
+    <string name="channel_deadlines_desc">A daily check for reviews that are due or overdue.</string>
+    <string name="notif_overdue_line">%1$s — %2$d days overdue</string>
+    <string name="notif_soon_line">%1$s — due in %2$d days</string>
+    <plurals name="notif_overdue_title">
+        <item quantity="one">1 review is overdue</item>
+        <item quantity="other">%1$d reviews are overdue</item>
+    </plurals>
+    <plurals name="notif_soon_title">
+        <item quantity="one">1 review is due soon</item>
+        <item quantity="other">%1$d reviews are due soon</item>
+    </plurals>
+
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+</resources>
