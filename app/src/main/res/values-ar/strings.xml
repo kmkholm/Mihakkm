@@ -266,6 +266,15 @@
     <string name="about_title">حول التطبيق</string>
     <string name="about_body">يحفظ «مِحَكّ» سجلّ عمل المُحكِّم على جهازه وحده. فعناوين المخطوطات وأسماء المؤلّفين ومسوّدات التقارير أمانة سرّية أودعتها المجلة عندك، ولا يرفع التطبيق شيئًا منها إلى أي خادم. والاتصال الوحيد الممكن هو استيراد ORCID الاختياري، وسجلاته لا تحمل هوية أي مخطوطة.</string>
     <string name="about_credits">من إعداد د. محمد توفيق</string>
+    <string name="about_author_heading">المؤلّف</string>
+    <string name="about_author_name">د. محمد توفيق</string>
+    <string name="about_author_role">علوم الحاسوب وأمن المعلومات</string>
+    <string name="about_author_note">كُتب هذا التطبيق لحاجة مؤلّفه نفسه بوصفه مُحكِّمًا، ثم لكل من يحفظ هذا السجلّ في مجلّد بريد.</string>
+    <string name="about_email">kmkhol01@gmail.com</string>
+    <string name="about_email_action">مراسلة بالبريد</string>
+    <string name="about_orcid_action">ملف ORCID</string>
+    <string name="about_email_subject">مِحَكّ</string>
+    <string name="about_no_mail_app">لا يوجد تطبيق بريد مهيّأ على هذا الجهاز.</string>
     <string name="about_version">الإصدار %1$s</string>
     <string name="about_content_note">قوائم الفحص أسئلة أصلية موجَّهة إلى المُحكِّم كُتبت خصّيصًا لهذا التطبيق، مستنيرة بأدلة الإبلاغ العامة المذكورة في كل قائمة. وهي عون على الحكم لا بديل عنه.</string>
 

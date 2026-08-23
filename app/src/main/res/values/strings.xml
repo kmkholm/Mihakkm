@@ -262,6 +262,15 @@
     <string name="about_title">About</string>
     <string name="about_body">Mihakk keeps a reviewer\'s working record on the reviewer\'s own device. Manuscript titles, author names and draft reports are confidential material entrusted to you by a journal — none of it is uploaded anywhere. The only network call the app can make is the optional ORCID import, and ORCID records carry no manuscript identity.</string>
     <string name="about_credits">Built by Dr. Mohammed Tawfik</string>
+    <string name="about_author_heading">The author</string>
+    <string name="about_author_name">Dr. Mohammed Tawfik</string>
+    <string name="about_author_role">Computer science and information security</string>
+    <string name="about_author_note">Written for the author\'s own use as a reviewer, and then for anyone who keeps this record in a mail folder.</string>
+    <string name="about_email">kmkhol01@gmail.com</string>
+    <string name="about_email_action">Send an email</string>
+    <string name="about_orcid_action">ORCID profile</string>
+    <string name="about_email_subject">Mihakk</string>
+    <string name="about_no_mail_app">No email app is set up on this device.</string>
     <string name="about_version">Version %1$s</string>
     <string name="about_content_note">Checklists are original reviewer-facing questions written for this app, informed by the public reporting guidelines named on each one. They are an aid to judgement, not a substitute for it.</string>
 

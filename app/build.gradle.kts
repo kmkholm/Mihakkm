@@ -1,5 +1,14 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
+}
+
+// Release signing. keystore.properties is gitignored and holds the password;
+// without it the release build still configures, it just comes out unsigned.
+val keystoreProps = Properties().apply {
+    val f = rootProject.file("keystore.properties")
+    if (f.exists()) f.inputStream().use { load(it) }
 }
 
 android {
@@ -14,9 +23,29 @@ android {
         versionName = "1.0"
     }
 
+    signingConfigs {
+        if (keystoreProps.getProperty("storeFile") != null) {
+            create("release") {
+                storeFile = file(keystoreProps.getProperty("storeFile"))
+                storePassword = keystoreProps.getProperty("storePassword")
+                keyAlias = keystoreProps.getProperty("keyAlias")
+                keyPassword = keystoreProps.getProperty("keyPassword")
+                // v3 as well as v2, so the signing key can be rotated later
+                // without every installed copy having to be removed first.
+                enableV2Signing = true
+                enableV3Signing = true
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
+            // The whole point of this app is that the record stays private, and a
+            // debuggable build hands it to anyone with adb. Release is the build
+            // that goes on a real phone.
+            isDebuggable = false
+            signingConfig = signingConfigs.findByName("release")
         }
     }
 

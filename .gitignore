@@ -14,3 +14,5 @@ local.properties
 *.aab
 *.keystore
 *.jks
+# Holds the release signing password. Never commit.
+keystore.properties
